@@ -8,6 +8,21 @@
     ],
     "routes": [
         {
+            "handle": "filesystem"
+        },
+        {
+            "src": "/assets/(.*)",
+            "dest": "/portfolio/assets/$1"
+        },
+        {
+            "src": "/favicon\\.ico",
+            "dest": "/portfolio/favicon.ico"
+        },
+        {
+            "src": "/logo\\.svg",
+            "dest": "/portfolio/logo.svg"
+        },
+        {
             "src": "/(.*)",
             "dest": "/portfolio/$1"
         }
