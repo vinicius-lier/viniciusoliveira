@@ -15,10 +15,6 @@
             "dest": "/portfolio/assets/$1"
         },
         {
-            "src": "/favicon\\.ico",
-            "dest": "/portfolio/favicon.ico"
-        },
-        {
             "src": "/logo\\.svg",
             "dest": "/portfolio/logo.svg"
         },
