@@ -711,16 +711,19 @@ button {
     }
 
     .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        inset: auto;
-        padding: 24px 20px;
+        position: fixed;
+        width: 240px;
+        height: 100vh;
+        inset: 0 auto 0 0;
+        padding: 32px 20px;
     }
 
     .sidebar__inner {
         padding: 0;
         align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
     }
 
     .sidebar-nav {
@@ -728,11 +731,12 @@ button {
     }
 
     .sidebar__social {
+        margin-top: auto;
         margin-bottom: 1.5rem;
     }
 
     .sidebar__footer {
-        margin-top: 1.5rem;
+        margin-top: 0;
     }
 
     .sidebar__link {
