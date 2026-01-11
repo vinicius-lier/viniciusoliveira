@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinicius Oliveira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="layout">
+        <!-- Navbar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar__inner">
+                <a href="#home" class="brand" aria-label="Vinicius Oliveira logo">
+                    <span>Vinicius</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav" aria-label="Primary">
+                <a href="#home" class="sidebar__link active">Home</a>
+                <a href="#about" class="sidebar__link">Sobre</a>
+                <a href="#projects" class="sidebar__link">Projetos</a>
+                <a href="#contact" class="sidebar__link">Contato</a>
+                <a href="Marcus-Vinicius-Marques-Oliveira-FlowCV-Resume-20251005.pdf" class="sidebar__link" download>
+                    Currículo
+                </a>
+            </nav>
+            <div class="sidebar__social">
+                <a href="#" aria-label="GitHub">
+                    <span>Gh</span>
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <span>Li</span>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <span>Ig</span>
+                </a>
+            </div>
+            <div class="sidebar__footer">
+                copyright &copy; 2026 Vinicius Oliveira <br> Todos os direitos reservados.
+            </div>
+        </aside>
+
+        <button class="mobile-menu" id="mobileMenu" aria-expanded="false">
+            <span class="mobile-menu__line"></span>
+            <span class="mobile-menu__line"></span>
+            <span class="mobile-menu__line"></span>
+            <span class="sr-only">Menu</span>
+        </button>
+        <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section id="home" class="section hero">
+                <div class="hero__background" aria-hidden="true">
+                    <span class="hero__orb hero__orb--one"></span>
+                    <span class="hero__orb hero__orb--two"></span>
+                    <span class="hero__grid"></span>
+                </div>
+                <div class="hero__content" data-animate="fade-right">
+                    <p class="section-label">Home</p>
+                    <h1 class="hero__title">
+                        Olá, eu sou Vinícius Oliveira
+                    </h1>
+                    <p class="hero__subtitle" data-primary="fade-up" style="animation-delay: 0.1s;">
+                        Desenvolvedor Front-end focado em produtos reais
+                    </p>
+                    <p class="hero__description">
+                        Crio interfaces claras, sistemas funcionais e experiências pensadas para uso real.
+                        Meu foco vai além do visual: construo produtos organizados, escaláveis e utilizáveis no dia a dia.
+                    </p>
+
+                    <div class="hero__actions">
+                        <a href="#projects" class="btn btn--primary">Projetos reais</a>
+                        <span aria-hidden="true">→</span>
+                        <a href="#contact" class="btn btn--secondary">Fale comigo</a>
+                    </div>
+                    <div class="hero__meta">
+                        <div class="hero__meta-item">
+                            <span class="hero__meta-icon">☎</span>
+                            <a href="https://wa.me/5524999582526" target="_blank" rel="noreferrer">
+                                WhatsApp: (24) 99958-2526
+                            </a>
+                        </div>
+                        <div class="hero__meta-item">
+                            <span class="hero__meta-icon">✉</span>
+                            <span>E-mail: vinicius.lier@icloud.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__image-wrapper">
+                    <img src="../assets/hero-main.svg" alt="Hero image" class="hero__image">
+                </div>
+            </section>
+
+            <section id="about" class="section">
+                <p class="section-label">Sobre</p>
+                <h2 class="section-title">Sobre mim</h2>
+                <div class="section__content">
+                    <p>
+                        Sou desenvolvedor front-end com mentalidade de produto e forte preocupação com organização,
+                        clareza e usabilidade.
+                    </p>
+                    <p>
+                        Meu trabalho não é apenas criar telas bonitas, mas estruturar interfaces que funcionem no mundo
+                        real, considerando regras de negócio, fluxos, manutenção e evolução do sistema.
+                    </p>
+                    <p>
+                        Tenho experiência desenvolvendo plataformas completas, desde a concepção da ideia até a
+                        implementação funcional, sempre priorizando simplicidade, legibilidade e consistência.
+                    </p>
+                </div>
+                <ul class="feature-list">
+                    <li>Pensamento sistêmico</li>
+                    <li>Organização de informação antes do visual</li>
+                    <li>Foco em uso real e recorrente</li>
+                    <li>Interface como parte do produto, não como camada superficial</li>
+                </ul>
+            </section>
+
+            <section id="projects" class="section">
+                <p class="section-label">Projetos</p>
+                <h2 class="section-title">Projetos</h2>
+                <p class="section__intro">
+                    Projetos reais desenvolvidos com foco em produto, organização e uso prático. Cada projeto resolve um
+                    problema concreto e foi pensado para funcionar no mundo real.
+                </p>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-thumb project-thumb--shiai">
+                            <img src="../assets/projects/shiai-system.jpg" alt="Shiai System dashboard">
+                            <span>Shiai System</span>
+                        </div>
+                        <h3>Shiai System</h3>
+                        <p class="project-type">Plataforma Web · SaaS</p>
+                        <p class="project-desc">
+                            Sistema para gestão de competições de Judô, focado em organização, clareza operacional e uso
+                            real em eventos esportivos.
+                        </p>
+                        <p class="project-highlight">
+                            Produto funcional, com regras, fluxos e operação real — não apenas demonstrativo.
+                        </p>
+                <ul class="project-tech">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Django</li>
+                    <li>PostgreSQL</li>
+                    <li>Produto Digital</li>
+                </ul>
+                        <a href="https://shiai-sistem.onrender.com/" class="btn btn--secondary" target="_blank" rel="noreferrer">
+                            Ver projeto
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-thumb project-thumb--shiken">
+                            <img src="../assets/projects/shiken.jpg" alt="Shiken management interface">
+                            <span>Shiken</span>
+                        </div>
+                        <h3>Shiken</h3>
+                        <p class="project-type">Plataforma Web · SaaS</p>
+                        <p class="project-desc">
+                            Sistema de gestão para academias e escolas de artes marciais, com foco em organização de
+                            alunos, planos e processos internos.
+                        </p>
+                        <p class="project-highlight">
+                            Pensado para uso recorrente, manutenção e crescimento do negócio.
+                        </p>
+                        <ul class="project-tech">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>UX de Produto</li>
+                        </ul>
+                        <a href="https://shiken-3.vercel.app/" class="btn btn--secondary" target="_blank" rel="noreferrer">
+                            Ver projeto
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-thumb project-thumb--valentim">
+                            <img src="../assets/projects/grupo-valentim.jpg" alt="Grupo Valentim website">
+                            <span>Grupo Valentim</span>
+                        </div>
+                        <h3>Grupo Valentim</h3>
+                        <p class="project-type">Website institucional</p>
+                        <p class="project-desc">
+                            Website desenvolvido para apresentação institucional do Grupo Valentim, com foco em clareza,
+                            identidade visual e presença digital profissional.
+                        </p>
+                        <p class="project-highlight">
+                            Clareza visual, hierarquia bem definida e identidade consistente.
+                        </p>
+                        <ul class="project-tech">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Layout Responsivo</li>
+                        </ul>
+                        <a href="https://grupovalentim.vercel.app/" class="btn btn--secondary" target="_blank" rel="noreferrer">
+                            Ver projeto
+                        </a>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-thumb project-thumb--portfolio">
+                            <img src="../assets/projects/portfolio-rvieira.jpg" alt="Portfolio RVieira website">
+                            <span>Portfolio RVieira</span>
+                        </div>
+                        <h3>Portfolio RVieira</h3>
+                        <p class="project-type">Website pessoal</p>
+                        <p class="project-desc">
+                            Portfolio com foco em apresentaÇõÇœo clara, navegaÇõÇœo direta e identidade visual consistente.
+                        </p>
+                        <p class="project-highlight">
+                            Projeto pensado para comunicar habilidades e resultados de forma objetiva.
+                        </p>
+                        <ul class="project-tech">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <a href="https://portfolio-rvieira.vercel.app/" class="btn btn--secondary" target="_blank" rel="noreferrer">
+                            Ver projeto
+                        </a>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-thumb project-thumb--academia">
+                            <img src="../assets/projects/academia-63.jpg" alt="Academia 63 website">
+                            <span>Academia 63</span>
+                        </div>
+                        <h3>Academia 63</h3>
+                        <p class="project-type">Website institucional</p>
+                        <p class="project-desc">
+                            Site para academia com foco em informaÇõÇœes essenciais, serviÇõÇœos e presenÇõa digital.
+                        </p>
+                        <p class="project-highlight">
+                            Layout responsivo e conteÇ¦do direto para facilitar o contato.
+                        </p>
+                        <ul class="project-tech">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <a href="https://academia-63.vercel.app/" class="btn btn--secondary" target="_blank" rel="noreferrer">
+                            Ver projeto
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <p class="section-label">Contato</p>
+                <h2 class="section-title">Vamos conversar</h2>
+                <div class="section__content">
+                    <p>
+                        Se você busca alguém que pense além da interface e construa produtos organizados e funcionais,
+                        estou disponível para conversar.
+                    </p>
+                </div>
+                <div class="contact-list">
+                    <div class="hero__meta-item">
+                        <span class="hero__meta-icon">☎</span>
+                        <a href="https://wa.me/5524999582526" target="_blank" rel="noreferrer">
+                            WhatsApp: (24) 99958-2526
+                        </a>
+                    </div>
+                    <div class="hero__meta-item">
+                        <span class="hero__meta-icon">✉</span>
+                        <span>E-mail: vinicius.lier@icloud.com</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="resume" class="section">
+                <p class="section-label">Currículo</p>
+                <h2 class="section-title">Perfil profissional</h2>
+                <div class="section__content">
+                    <p>
+                        Desenvolvedor Front-end com foco em produto, usabilidade e organização de sistemas. Experiência
+                        na criação de plataformas funcionais, pensando em uso real, manutenção e escalabilidade.
+                    </p>
+                </div>
+                <h3 class="section-subtitle">Competências</h3>
+                <ul class="feature-list">
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Python (Django e RPA)</li>
+                    <li>Estruturação de interfaces</li>
+                    <li>UX/UI aplicado a produto</li>
+                    <li>Organização de fluxos e regras</li>
+                    <li>Desenvolvimento de sistemas web</li>
+                </ul>
+                <h3 class="section-subtitle">Experiência em projetos</h3>
+                <ul class="feature-list">
+                    <li>Shiai System — Plataforma SaaS</li>
+                    <li>Shiken — Plataforma de gestão</li>
+                    <li>Grupo Valentim — Website institucional</li>
+                </ul>
+                <div class="section-cta">
+                    <a href="Marcus-Vinicius-Marques-Oliveira-FlowCV-Resume-20251005.pdf" class="btn btn--primary" download>
+                        Baixar currículo em PDF
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
