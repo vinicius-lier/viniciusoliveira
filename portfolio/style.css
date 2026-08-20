@@ -549,9 +549,7 @@ button {
     z-index: 2;
 }
 
-.project-thumb--shiai::after,
-.project-thumb--shiken::after,
-.project-thumb--valentim::after {
+.project-thumb--shiai::after {
     content: "";
     position: absolute;
     inset: 12px;
@@ -561,14 +559,6 @@ button {
 
 .project-thumb--shiai {
     background: linear-gradient(140deg, #f6f1eb 0%, rgba(242, 166, 90, 0.25) 100%);
-}
-
-.project-thumb--shiken {
-    background: linear-gradient(140deg, #f6f1eb 0%, rgba(139, 94, 52, 0.2) 100%);
-}
-
-.project-thumb--valentim {
-    background: linear-gradient(140deg, #f6f1eb 0%, #e7ded3 100%);
 }
 
 .project-thumb--portfolio {
