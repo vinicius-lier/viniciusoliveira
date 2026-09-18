@@ -25,6 +25,7 @@
             <nav class="sidebar-nav" aria-label="Primary">
                 <a href="#home" class="sidebar__link active">Home</a>
                 <a href="#about" class="sidebar__link">Sobre</a>
+                <a href="#redes" class="sidebar__link">Redes</a>
                 <a href="#projects" class="sidebar__link">Projetos</a>
                 <a href="#contact" class="sidebar__link">Contato</a>
                 <a href="curriculo.html" class="sidebar__link">
@@ -69,12 +70,12 @@
                         Olá, eu sou Vinícius Oliveira
                     </h1>
                     <p class="hero__subtitle" data-primary="fade-up" style="animation-delay: 0.1s;">
-                        Desenvolvedor Front-end focado em produtos reais
+                        Desenvolvedor & Analista de Redes
                     </p>
                     <p class="hero__description">
-                        Crio interfaces claras, sistemas funcionais e experiências pensadas para uso real.
-                        Meu foco vai além do visual: construo produtos organizados, escaláveis e utilizáveis no dia a
-                        dia.
+                        Construo software e cuido da infraestrutura que o sustenta. Atuo entre rede, automação e
+                        desenvolvimento, transformando processos manuais de operação em fluxos conectados,
+                        organizados e confiáveis.
                     </p>
 
                     <div class="hero__actions">
@@ -105,34 +106,126 @@
                 <h2 class="section-title">Sobre mim</h2>
                 <div class="section__content">
                     <p>
-                        Sou desenvolvedor front-end com mentalidade de produto e forte preocupação com organização,
-                        clareza e usabilidade.
+                        Sou desenvolvedor com mentalidade de produto e atuação direta em redes de computadores e
+                        infraestrutura de telecomunicações — uma combinação que faz cada vez mais sentido no meu
+                        trabalho.
                     </p>
                     <p>
-                        Meu trabalho não é apenas criar telas bonitas, mas estruturar interfaces que funcionem no mundo
-                        real, considerando regras de negócio, fluxos, manutenção e evolução do sistema.
+                        No dia a dia, transito entre construir sistemas web e operar, monitorar e automatizar redes
+                        FTTH/GPON na linha de frente de um NOC. Essa dupla vivência muda a forma como penso software:
+                        considero disponibilidade, integração entre sistemas e o que realmente acontece quando algo
+                        falha em produção.
                     </p>
                     <p>
-                        Tenho experiência desenvolvendo plataformas completas, desde a concepção da ideia até a
-                        implementação funcional, sempre priorizando simplicidade, legibilidade e consistência.
+                        Gosto de resolver problemas reais conectando pontas que normalmente ficam isoladas — rede,
+                        automação e desenvolvimento — reduzindo etapas manuais e aproximando as ferramentas da rotina
+                        de quem as usa.
                     </p>
                 </div>
                 <ul class="feature-list">
-                    <li>Pensamento sistêmico</li>
+                    <li>Pensamento sistêmico, da rede ao software</li>
                     <li>Organização de informação antes do visual</li>
-                    <li>Foco em uso real e recorrente</li>
-                    <li>Interface como parte do produto, não como camada superficial</li>
+                    <li>Automação de processos operacionais reais</li>
+                    <li>Interface e infraestrutura como partes do mesmo produto</li>
                 </ul>
+            </section>
+
+            <section id="redes" class="section">
+                <p class="section-label">Redes</p>
+                <h2 class="section-title">Redes & Infraestrutura</h2>
+                <p class="section__intro">
+                    Atuo na operação de um NOC/CGR de provedor de internet: monitoramento, troubleshooting e
+                    automação de infraestrutura FTTH/GPON. Uso desenvolvimento de software para tornar essa rotina
+                    mais rápida, confiável e menos dependente de tarefas manuais.
+                </p>
+                <div class="skills-grid">
+                    <div>
+                        <h3>Redes & Telecom</h3>
+                        <ul class="tag-list">
+                            <li>Redes TCP/IP</li>
+                            <li>FTTH / GPON</li>
+                            <li>Huawei OLT</li>
+                            <li>Huawei Switches</li>
+                            <li>MikroTik</li>
+                            <li>VLAN</li>
+                            <li>RADIUS</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Monitoramento & Operação</h3>
+                        <ul class="tag-list">
+                            <li>Zabbix</li>
+                            <li>Grafana</li>
+                            <li>Hubsoft</li>
+                            <li>NOC / CGR</li>
+                            <li>Análise de incidentes</li>
+                            <li>Troubleshooting</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Automação</h3>
+                        <ul class="tag-list">
+                            <li>Python</li>
+                            <li>Correlação de eventos de rede</li>
+                            <li>Integração entre sistemas</li>
+                            <li>APIs REST</li>
+                            <li>Webhooks / Discord</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <section id="projects" class="section">
                 <p class="section-label">Projetos</p>
                 <h2 class="section-title">Projetos</h2>
                 <p class="section__intro">
-                    Projetos reais desenvolvidos com foco em produto, organização e uso prático. Cada projeto resolve um
-                    problema concreto e foi pensado para funcionar no mundo real.
+                    Projetos reais desenvolvidos com foco em produto, organização e uso prático — de automações de
+                    operação e rede a plataformas web completas. Cada um resolve um problema concreto e foi pensado
+                    para funcionar no mundo real.
                 </p>
                 <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-thumb project-thumb--travapon">
+                            <span>Travapon</span>
+                        </div>
+                        <h3>Travapon</h3>
+                        <p class="project-type">Ferramenta interna — Automação de NOC/CGR</p>
+                        <p class="project-desc">
+                            Evolução de uma ferramenta interna de operação: correlaciona eventos de rede, detecta
+                            quedas físicas de ONUs e automatiza a geração de Ordens de Serviço, integrando Hubsoft e
+                            Discord ao fluxo Rede → Travapon → Hubsoft → OS. No BackOffice, o botão "Corrigir ID"
+                            substituiu um processo manual via Postman para liberar cadastros duplicados.
+                        </p>
+                        <ul class="project-tech">
+                            <li>Python</li>
+                            <li>Automação de rede</li>
+                            <li>APIs REST</li>
+                            <li>Hubsoft</li>
+                        </ul>
+                        <span class="project-badge">Projeto interno</span>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-thumb project-thumb--keiko">
+                            <span>Keiko Fukuda</span>
+                        </div>
+                        <h3>Escola de Judô Keiko Fukuda</h3>
+                        <p class="project-type">Sistema de gestão sob medida</p>
+                        <p class="project-desc">
+                            Sistema personalizado para a rotina administrativa e esportiva de uma escola de Judô,
+                            com área institucional, cadastro de alunos, turmas, professores, matrículas e gestão
+                            financeira. Desenvolvido pela SHIAI Sistem sob medida para o processo real da escola.
+                        </p>
+                        <ul class="project-tech">
+                            <li>Django</li>
+                            <li>PostgreSQL</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <a href="http://54.94.104.232/" class="btn btn--secondary" target="_blank" rel="noreferrer">
+                            Ver projeto
+                        </a>
+                    </article>
                     <article class="project-card">
                         <div class="project-thumb project-thumb--shiai">
                             <img src="./assets/projects/shiai-system.jpg" alt="Shiai Sistem dashboard">
@@ -246,8 +339,8 @@
                             <li>CSS</li>
                             <li>JavaScript</li>
                         </ul>
-                        <a href="https://augustusteam.netlify.app/" class="btn btn--secondary" target="_blank"
-                            rel="noreferrer">
+                        <a href="https://augustusteam.netlify.app/academy-system/landing/index.html"
+                            class="btn btn--secondary" target="_blank" rel="noreferrer">
                             Ver projeto
                         </a>
                     </article>
@@ -300,6 +393,7 @@
                 <h3 class="section-subtitle">Experiência recente</h3>
                 <ul class="feature-list">
                     <li>Analista de TI — CGR/NOC, provedor de internet</li>
+                    <li>Travapon — Automação interna de NOC/CGR e integração com Hubsoft</li>
                     <li>Shiai Sistem — Plataforma SaaS para gestão de competições de Judô</li>
                 </ul>
                 <div class="section-cta">
