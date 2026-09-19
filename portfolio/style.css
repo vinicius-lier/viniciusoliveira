@@ -366,16 +366,6 @@ button {
     left: 10%;
 }
 
-.hero__grid {
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(rgba(34, 211, 238, 0.45) 1.5px, transparent 1.5px),
-        linear-gradient(rgba(148, 197, 227, 0.07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(148, 197, 227, 0.07) 1px, transparent 1px);
-    background-size: 48px 48px, 48px 48px, 48px 48px;
-    opacity: 0.5;
-}
-
 .hero__content {
     position: relative;
     z-index: 1;

@@ -81,35 +81,58 @@
         </circle>
     </g>
 
-    <!-- central globe: connected world -->
+    <!-- central globe: earth from above, at night -->
+    <circle cx="300" cy="300" r="84" fill="none" stroke="rgba(34,211,238,0.22)" stroke-width="8"
+        filter="url(#softBlur)" />
     <g filter="url(#neonGlowSoft)">
-        <circle cx="300" cy="300" r="75" fill="#060a16" stroke="url(#lineGrad)" stroke-width="2" />
+        <circle cx="300" cy="300" r="75" fill="#050912" stroke="url(#lineGrad)" stroke-width="2" />
     </g>
-    <g clip-path="url(#globeClip)" fill="none" stroke="rgba(125,211,252,0.32)" stroke-width="1.1">
-        <ellipse cx="300" cy="300" rx="55" ry="75" />
-        <ellipse cx="300" cy="300" rx="26" ry="75" />
-        <ellipse cx="300" cy="300" rx="75" ry="16" />
-        <ellipse cx="300" cy="270" rx="68" ry="13" />
-        <ellipse cx="300" cy="330" rx="68" ry="13" />
-        <ellipse cx="300" cy="243" rx="46" ry="9" />
-        <ellipse cx="300" cy="357" rx="46" ry="9" />
-        <path d="M235 315 Q300 270 365 305" stroke-width="1.3" stroke="rgba(224,247,255,0.4)" />
+    <g clip-path="url(#globeClip)">
+        <!-- continents, stylised -->
+        <path d="M245,265 C232,272 224,292 231,312 C235,328 248,342 262,338 C274,334 275,314 271,296 C269,280 260,260 245,265 Z"
+            fill="#3f6f96" />
+        <path d="M300,246 C286,252 281,270 286,288 C280,304 283,332 299,349 C314,338 321,314 315,298 C323,282 318,258 300,246 Z"
+            fill="#4a7ba3" />
+        <path d="M328,268 C320,278 322,296 331,307 C327,320 335,335 351,329 C363,321 361,300 353,289 C356,276 343,260 328,268 Z"
+            fill="#3a6a90" />
+        <path d="M312,352 C308,362 312,372 321,373 C327,374 331,366 329,357 C327,350 316,346 312,352 Z" fill="#3a6a90" />
+        <!-- great-circle network lines crossing the globe -->
+        <g fill="none" stroke="#e0f7ff" stroke-width="1.3" opacity="0.95" filter="url(#neonGlowSoft)">
+            <path id="arcA" d="M250,300 Q276,260 302,292" />
+            <path id="arcB" d="M306,312 Q324,338 348,300" />
+        </g>
+        <g fill="#e0f7ff">
+            <circle r="2.4">
+                <animateMotion dur="2.6s" begin="0.3s" repeatCount="indefinite" path="M250,300 Q276,260 302,292" />
+                <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="2.6s"
+                    repeatCount="indefinite" />
+            </circle>
+            <circle r="2.4">
+                <animateMotion dur="2.6s" begin="1.4s" repeatCount="indefinite" path="M306,312 Q324,338 348,300" />
+                <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="2.6s"
+                    repeatCount="indefinite" />
+            </circle>
+        </g>
     </g>
-    <g fill="#e0f7ff">
-        <circle cx="278" cy="278" r="2.4">
+    <!-- city lights -->
+    <g fill="#e0f7ff" clip-path="url(#globeClip)">
+        <circle cx="248" cy="288" r="2.2">
             <animate attributeName="opacity" values="1;0.2;1" dur="2.1s" begin="0s" repeatCount="indefinite" />
         </circle>
-        <circle cx="325" cy="288" r="2.4">
+        <circle cx="300" cy="270" r="2.2">
             <animate attributeName="opacity" values="1;0.2;1" dur="2.1s" begin="0.5s" repeatCount="indefinite" />
         </circle>
-        <circle cx="293" cy="322" r="2.4">
+        <circle cx="305" cy="322" r="2.2">
             <animate attributeName="opacity" values="1;0.2;1" dur="2.1s" begin="1s" repeatCount="indefinite" />
         </circle>
-        <circle cx="318" cy="320" r="2.4">
+        <circle cx="340" cy="296" r="2.2">
             <animate attributeName="opacity" values="1;0.2;1" dur="2.1s" begin="1.5s" repeatCount="indefinite" />
         </circle>
-        <circle cx="300" cy="255" r="2.4">
+        <circle cx="345" cy="308" r="2.2">
             <animate attributeName="opacity" values="1;0.2;1" dur="2.1s" begin="2s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="260" cy="320" r="2.2">
+            <animate attributeName="opacity" values="1;0.2;1" dur="2.1s" begin="0.8s" repeatCount="indefinite" />
         </circle>
     </g>
 
