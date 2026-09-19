@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="heroTitle">
+    <title id="heroTitle">Painel de rede animado conectando sistemas, redes, código, automação e monitoramento</title>
+    <defs>
+        <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#7dd3fc" />
+            <stop offset="100%" stop-color="#3b82f6" />
+        </linearGradient>
+        <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.45" />
+            <stop offset="100%" stop-color="#22d3ee" stop-opacity="0" />
+        </radialGradient>
+        <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="18" />
+        </filter>
+        <filter id="neonGlow" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="3.2" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="neonGlowSoft" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="1.6" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+
+    <circle cx="300" cy="300" r="180" fill="url(#centerGlow)" filter="url(#softBlur)" />
+    <circle cx="300" cy="300" r="230" fill="none" stroke="rgba(125,211,252,0.16)" stroke-width="1"
+        stroke-dasharray="2 8">
+        <animateTransform attributeName="transform" type="rotate" from="0 300 300" to="360 300 300" dur="70s"
+            repeatCount="indefinite" />
+    </circle>
+    <circle cx="300" cy="300" r="185" fill="none" stroke="rgba(125,211,252,0.1)" stroke-width="1" />
+
+    <!-- connections -->
+    <g fill="none" stroke="url(#lineGrad)" stroke-width="2" stroke-linecap="round" opacity="0.85"
+        filter="url(#neonGlowSoft)">
+        <path id="lineTop" d="M300 225 C300 195 300 165 300 150" />
+        <path id="lineTL" d="M255 245 C195 220 155 215 120 205" />
+        <path id="lineTR" d="M345 245 C405 220 445 215 480 205" />
+        <path id="lineBL" d="M255 355 C195 390 165 425 135 455" />
+        <path id="lineBR" d="M345 355 C405 390 435 425 465 455" />
+    </g>
+
+    <!-- traveling data packets -->
+    <g fill="#e0f7ff" filter="url(#neonGlow)">
+        <circle r="3.4">
+            <animateMotion dur="3.2s" begin="0s" repeatCount="indefinite" path="M300 225 C300 195 300 165 300 150" />
+            <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="3.2s"
+                repeatCount="indefinite" />
+        </circle>
+        <circle r="3.4">
+            <animateMotion dur="3.2s" begin="0.5s" repeatCount="indefinite"
+                path="M255 245 C195 220 155 215 120 205" />
+            <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="3.2s"
+                repeatCount="indefinite" />
+        </circle>
+        <circle r="3.4">
+            <animateMotion dur="3.2s" begin="1s" repeatCount="indefinite" path="M345 245 C405 220 445 215 480 205" />
+            <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="3.2s"
+                repeatCount="indefinite" />
+        </circle>
+        <circle r="3.4">
+            <animateMotion dur="3.2s" begin="1.5s" repeatCount="indefinite"
+                path="M255 355 C195 390 165 425 135 455" />
+            <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="3.2s"
+                repeatCount="indefinite" />
+        </circle>
+        <circle r="3.4">
+            <animateMotion dur="3.2s" begin="2s" repeatCount="indefinite" path="M345 355 C405 390 435 425 465 455" />
+            <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="3.2s"
+                repeatCount="indefinite" />
+        </circle>
+    </g>
+
+    <!-- central server -->
+    <g filter="url(#neonGlowSoft)">
+        <rect x="255" y="225" width="90" height="150" rx="16" fill="#060a16" stroke="url(#lineGrad)"
+            stroke-width="2" />
+    </g>
+    <g stroke="rgba(125,211,252,0.18)" stroke-width="1.5">
+        <line x1="266" y1="255" x2="334" y2="255" />
+        <line x1="266" y1="285" x2="334" y2="285" />
+        <line x1="266" y1="315" x2="334" y2="315" />
+        <line x1="266" y1="345" x2="334" y2="345" />
+    </g>
+    <g fill="#22d3ee">
+        <circle cx="275" cy="240" r="2.8">
+            <animate attributeName="opacity" values="1;0.25;1" dur="1.8s" begin="0s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="275" cy="270" r="2.8">
+            <animate attributeName="opacity" values="1;0.25;1" dur="1.8s" begin="0.3s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="275" cy="300" r="2.8">
+            <animate attributeName="opacity" values="1;0.25;1" dur="1.8s" begin="0.6s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="275" cy="330" r="2.8">
+            <animate attributeName="opacity" values="1;0.25;1" dur="1.8s" begin="0.9s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="275" cy="360" r="2.8">
+            <animate attributeName="opacity" values="1;0.25;1" dur="1.8s" begin="1.2s" repeatCount="indefinite" />
+        </circle>
+    </g>
+    <g fill="rgba(125,211,252,0.35)">
+        <rect x="322" y="235" width="6" height="10" rx="1.5" />
+        <rect x="322" y="265" width="6" height="10" rx="1.5" />
+        <rect x="322" y="295" width="6" height="10" rx="1.5" />
+        <rect x="322" y="325" width="6" height="10" rx="1.5" />
+        <rect x="322" y="355" width="6" height="10" rx="1.5" />
+    </g>
+
+    <!-- nodes -->
+    <g>
+        <!-- Sistemas -->
+        <g>
+            <circle cx="300" cy="150" r="40" fill="none" stroke="#22d3ee" stroke-width="1.5" opacity="0.5">
+                <animate attributeName="r" values="34;46;34" dur="3.4s" begin="0s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.55;0;0.55" dur="3.4s" begin="0s"
+                    repeatCount="indefinite" />
+            </circle>
+            <circle cx="300" cy="150" r="34" fill="#060a16" stroke="url(#lineGrad)" stroke-width="2"
+                filter="url(#neonGlowSoft)" />
+            <g transform="translate(300,150)" stroke="#e0f7ff" stroke-width="2" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" filter="url(#neonGlowSoft)">
+                <ellipse cx="0" cy="-8" rx="10" ry="4" />
+                <path d="M -10,-8 L -10,8 A 10 4 0 0 0 10 8 L 10,-8" />
+            </g>
+        </g>
+
+        <!-- Redes -->
+        <g>
+            <circle cx="120" cy="205" r="40" fill="none" stroke="#22d3ee" stroke-width="1.5" opacity="0.5">
+                <animate attributeName="r" values="34;46;34" dur="3.4s" begin="0.5s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.55;0;0.55" dur="3.4s" begin="0.5s"
+                    repeatCount="indefinite" />
+            </circle>
+            <circle cx="120" cy="205" r="34" fill="#060a16" stroke="url(#lineGrad)" stroke-width="2"
+                filter="url(#neonGlowSoft)" />
+            <g transform="translate(120,205)" stroke="#e0f7ff" stroke-width="2" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" filter="url(#neonGlowSoft)">
+                <path d="M -5,3 A 7,7 0 0,1 5,3" />
+                <path d="M -9,-2 A 13,13 0 0,1 9,-2" />
+                <path d="M -13,-7 A 19,19 0 0,1 13,-7" />
+            </g>
+            <circle cx="120" cy="214" r="2.4" fill="#e0f7ff" />
+        </g>
+
+        <!-- Código -->
+        <g>
+            <circle cx="480" cy="205" r="40" fill="none" stroke="#22d3ee" stroke-width="1.5" opacity="0.5">
+                <animate attributeName="r" values="34;46;34" dur="3.4s" begin="1s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.55;0;0.55" dur="3.4s" begin="1s"
+                    repeatCount="indefinite" />
+            </circle>
+            <circle cx="480" cy="205" r="34" fill="#060a16" stroke="url(#lineGrad)" stroke-width="2"
+                filter="url(#neonGlowSoft)" />
+            <g transform="translate(480,205)" stroke="#e0f7ff" stroke-width="2" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" filter="url(#neonGlowSoft)">
+                <path d="M -4,-9 L -11,0 L -4,9" />
+                <path d="M 4,-9 L 11,0 L 4,9" />
+            </g>
+        </g>
+
+        <!-- Automação -->
+        <g>
+            <circle cx="135" cy="455" r="40" fill="none" stroke="#22d3ee" stroke-width="1.5" opacity="0.5">
+                <animate attributeName="r" values="34;46;34" dur="3.4s" begin="1.5s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.55;0;0.55" dur="3.4s" begin="1.5s"
+                    repeatCount="indefinite" />
+            </circle>
+            <circle cx="135" cy="455" r="34" fill="#060a16" stroke="url(#lineGrad)" stroke-width="2"
+                filter="url(#neonGlowSoft)" />
+            <g transform="translate(135,455)" stroke="#e0f7ff" stroke-width="2" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" filter="url(#neonGlowSoft)">
+                <path d="M 8,-8 A 11,11 0 1,0 8,8" />
+            </g>
+            <path d="M 141,463 L 135,460 L 139,454 Z" fill="#e0f7ff" transform="translate(135,455)"
+                filter="url(#neonGlowSoft)" />
+        </g>
+
+        <!-- Monitoramento -->
+        <g>
+            <circle cx="465" cy="455" r="40" fill="none" stroke="#22d3ee" stroke-width="1.5" opacity="0.5">
+                <animate attributeName="r" values="34;46;34" dur="3.4s" begin="2s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.55;0;0.55" dur="3.4s" begin="2s"
+                    repeatCount="indefinite" />
+            </circle>
+            <circle cx="465" cy="455" r="34" fill="#060a16" stroke="url(#lineGrad)" stroke-width="2"
+                filter="url(#neonGlowSoft)" />
+            <g transform="translate(465,455)" stroke="#e0f7ff" stroke-width="2" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" filter="url(#neonGlowSoft)">
+                <path d="M -12,0 L -6,0 L -3,-9 L 2,9 L 5,-5 L 8,0 L 12,0" />
+            </g>
+        </g>
+    </g>
+
+    <!-- labels -->
+    <g fill="#9fc9e0" font-family="Arial, Helvetica, sans-serif" font-size="13" letter-spacing="0.5"
+        text-anchor="middle">
+        <text x="300" y="202">Sistemas</text>
+        <text x="120" y="257">Redes</text>
+        <text x="480" y="257">Código</text>
+        <text x="135" y="507">Automação</text>
+        <text x="465" y="507">Monitoramento</text>
+    </g>
+</svg>
