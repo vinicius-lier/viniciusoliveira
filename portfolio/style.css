@@ -571,10 +571,10 @@ button {
 }
 
 .hero__image {
-    width: min(560px, 100%);
-    border-radius: 24px;
-    border: 1px solid rgba(148, 197, 227, 0.2);
-    box-shadow: 0 25px 55px rgba(6, 10, 22, 0.45), 0 0 50px rgba(34, 211, 238, 0.16);
+    width: min(620px, 100%);
+    -webkit-mask-image: radial-gradient(ellipse 82% 82% at 50% 40%, #000 30%, transparent 95%);
+    mask-image: radial-gradient(ellipse 82% 82% at 50% 40%, #000 30%, transparent 95%);
+    filter: drop-shadow(0 0 70px rgba(34, 211, 238, 0.22));
 }
 
 /* Motion */
