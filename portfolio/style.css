@@ -335,7 +335,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    gap: 32px;
     min-height: calc(100vh - 112px);
 }
 
@@ -344,7 +344,7 @@ button {
     position: absolute;
     inset: 0;
     z-index: 0;
-    background: radial-gradient(ellipse 42% 55% at 74% 36%, rgba(34, 211, 238, 0.18), transparent 70%);
+    background: radial-gradient(ellipse 42% 55% at 78% 34%, rgba(34, 211, 238, 0.16), transparent 70%);
     pointer-events: none;
 }
 
@@ -355,9 +355,19 @@ button {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 72% 18%;
-    -webkit-mask-image: linear-gradient(to left, #000 0%, #000 30%, transparent 58%);
-    mask-image: linear-gradient(to left, #000 0%, #000 30%, transparent 58%);
+    object-position: 80% 16%;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 46%, #000 76%, #000 100%);
+    mask-image: linear-gradient(to right, transparent 0%, transparent 46%, #000 76%, #000 100%);
+    pointer-events: none;
+}
+
+.hero__portrait-veil {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+        radial-gradient(circle at 80% 22%, rgba(234, 242, 248, 0.1), transparent 40%),
+        linear-gradient(to right, rgba(4, 10, 22, 0.94) 0%, rgba(4, 10, 22, 0.8) 30%, rgba(4, 10, 22, 0.35) 52%, transparent 72%);
     pointer-events: none;
 }
 
@@ -366,27 +376,35 @@ button {
     position: relative;
     z-index: 1;
     display: grid;
-    gap: 20px;
-    max-width: 480px;
+    max-width: clamp(360px, 42%, 560px);
+}
+
+.hero__heading {
+    gap: 12px;
+}
+
+.hero__content {
+    gap: 24px;
 }
 
 .hero__title {
     margin: 0;
-    font-size: clamp(2.75rem, 2rem + 3vw, 4.5rem);
-    line-height: 1.08;
+    font-size: clamp(2.5rem, 1.8rem + 2.6vw, 4rem);
+    line-height: 1.05;
     letter-spacing: -0.02em;
 }
 
 .hero__subtitle {
     margin: 0;
     color: var(--text-muted);
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
 }
 
 .hero__description {
     margin: 0;
     color: var(--text-main);
-    max-width: 36rem;
     line-height: 1.6;
 }
 
@@ -396,10 +414,19 @@ button {
     gap: 16px;
 }
 
+.hero__actions-arrow {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    min-height: 50px;
     padding: 12px 22px;
     border-radius: 999px;
     font-weight: 500;
@@ -437,24 +464,32 @@ button {
 
 .hero__meta {
     display: grid;
-    gap: 12px;
+    gap: 14px;
     color: var(--text-main);
 }
 
 .hero__meta-item {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.hero__meta-item a {
+    padding-block: 4px;
 }
 
 .hero__meta-icon {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
     border-radius: 999px;
     background: var(--card-bg);
     border: 1px solid var(--border-light);
     display: grid;
     place-items: center;
+    font-size: 1.05rem;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
 }
 
@@ -673,14 +708,20 @@ button {
     }
 
     .hero__portrait {
-        object-position: 68% 16%;
-        -webkit-mask-image: linear-gradient(to left, #000 0%, #000 38%, transparent 82%);
-        mask-image: linear-gradient(to left, #000 0%, #000 38%, transparent 82%);
+        object-position: 84% 14%;
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 38%, #000 80%, #000 100%);
+        mask-image: linear-gradient(to right, transparent 0%, transparent 38%, #000 80%, #000 100%);
+    }
+
+    .hero__portrait-veil {
+        background:
+            radial-gradient(circle at 84% 20%, rgba(234, 242, 248, 0.1), transparent 38%),
+            linear-gradient(to right, rgba(4, 10, 22, 0.95) 0%, rgba(4, 10, 22, 0.82) 26%, rgba(4, 10, 22, 0.3) 46%, transparent 66%);
     }
 
     .hero__heading,
     .hero__content {
-        max-width: 460px;
+        max-width: min(46%, 440px);
     }
 }
 
@@ -743,7 +784,8 @@ button {
         gap: 24px;
     }
 
-    .hero::before {
+    .hero::before,
+    .hero__portrait-veil {
         display: none;
     }
 
