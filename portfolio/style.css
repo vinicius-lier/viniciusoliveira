@@ -344,7 +344,7 @@ button {
     position: absolute;
     inset: 0;
     z-index: 0;
-    background: radial-gradient(ellipse 42% 55% at 78% 34%, rgba(34, 211, 238, 0.16), transparent 70%);
+    background: radial-gradient(ellipse 42% 55% at 70% 32%, rgba(34, 211, 238, 0.16), transparent 70%);
     pointer-events: none;
 }
 
@@ -355,9 +355,9 @@ button {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 80% 16%;
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 46%, #000 76%, #000 100%);
-    mask-image: linear-gradient(to right, transparent 0%, transparent 46%, #000 76%, #000 100%);
+    object-position: 70% 18%;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 34%, #000 62%, #000 100%);
+    mask-image: linear-gradient(to right, transparent 0%, transparent 34%, #000 62%, #000 100%);
     pointer-events: none;
 }
 
@@ -365,9 +365,12 @@ button {
     position: absolute;
     inset: 0;
     z-index: 0;
-    background:
-        radial-gradient(circle at 80% 22%, rgba(234, 242, 248, 0.1), transparent 40%),
-        linear-gradient(to right, rgba(4, 10, 22, 0.94) 0%, rgba(4, 10, 22, 0.8) 30%, rgba(4, 10, 22, 0.35) 52%, transparent 72%);
+    background: linear-gradient(to right,
+            rgba(4, 13, 28, 0.9) 0%,
+            rgba(4, 13, 28, 0.72) 22%,
+            rgba(4, 13, 28, 0.38) 38%,
+            rgba(4, 13, 28, 0.12) 52%,
+            transparent 64%);
     pointer-events: none;
 }
 
@@ -376,21 +379,22 @@ button {
     position: relative;
     z-index: 1;
     display: grid;
-    max-width: clamp(360px, 42%, 560px);
 }
 
 .hero__heading {
-    gap: 12px;
+    gap: 14px;
+    max-width: 580px;
 }
 
 .hero__content {
-    gap: 24px;
+    gap: 28px;
+    max-width: 650px;
 }
 
 .hero__title {
     margin: 0;
-    font-size: clamp(2.5rem, 1.8rem + 2.6vw, 4rem);
-    line-height: 1.05;
+    font-size: clamp(3.4rem, 2.2rem + 4vw, 5.5rem);
+    line-height: 0.98;
     letter-spacing: -0.02em;
 }
 
@@ -418,15 +422,12 @@ button {
     display: inline-flex;
     align-items: center;
     color: var(--text-muted);
-    font-size: 1.1rem;
-    line-height: 1;
 }
 
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 50px;
     padding: 12px 22px;
     border-radius: 999px;
     font-weight: 500;
@@ -464,32 +465,24 @@ button {
 
 .hero__meta {
     display: grid;
-    gap: 14px;
+    gap: 12px;
     color: var(--text-main);
 }
 
 .hero__meta-item {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    font-size: 0.95rem;
-    line-height: 1.4;
-}
-
-.hero__meta-item a {
-    padding-block: 4px;
+    gap: 10px;
 }
 
 .hero__meta-icon {
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
     border-radius: 999px;
     background: var(--card-bg);
     border: 1px solid var(--border-light);
     display: grid;
     place-items: center;
-    font-size: 1.05rem;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
 }
 
@@ -708,20 +701,26 @@ button {
     }
 
     .hero__portrait {
-        object-position: 84% 14%;
-        -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 38%, #000 80%, #000 100%);
-        mask-image: linear-gradient(to right, transparent 0%, transparent 38%, #000 80%, #000 100%);
+        object-position: 76% 14%;
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 28%, #000 58%, #000 100%);
+        mask-image: linear-gradient(to right, transparent 0%, transparent 28%, #000 58%, #000 100%);
     }
 
     .hero__portrait-veil {
-        background:
-            radial-gradient(circle at 84% 20%, rgba(234, 242, 248, 0.1), transparent 38%),
-            linear-gradient(to right, rgba(4, 10, 22, 0.95) 0%, rgba(4, 10, 22, 0.82) 26%, rgba(4, 10, 22, 0.3) 46%, transparent 66%);
+        background: linear-gradient(to right,
+                rgba(4, 13, 28, 0.92) 0%,
+                rgba(4, 13, 28, 0.74) 18%,
+                rgba(4, 13, 28, 0.4) 32%,
+                rgba(4, 13, 28, 0.12) 46%,
+                transparent 58%);
     }
 
-    .hero__heading,
+    .hero__heading {
+        max-width: 480px;
+    }
+
     .hero__content {
-        max-width: min(46%, 440px);
+        max-width: 520px;
     }
 }
 
