@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="heroTitle">
-    <title id="heroTitle">Globo conectado animado, ligado a sistemas, redes, código, automação e monitoramento</title>
+    <title id="heroTitle">Computador com código na tela, ligado a sistemas, redes, automação e monitoramento</title>
     <defs>
         <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#7dd3fc" />
@@ -27,8 +27,8 @@
                 <feMergeNode in="SourceGraphic" />
             </feMerge>
         </filter>
-        <clipPath id="globeClip">
-            <circle cx="300" cy="300" r="75" />
+        <clipPath id="screenClip">
+            <rect x="234" y="237" width="132" height="78" rx="4" />
         </clipPath>
     </defs>
 
@@ -43,98 +43,78 @@
     <!-- connections -->
     <g fill="none" stroke="url(#lineGrad)" stroke-width="2" stroke-linecap="round" opacity="0.85"
         filter="url(#neonGlowSoft)">
-        <path id="lineTop" d="M300 225 C300 195 300 165 300 150" />
-        <path id="lineTL" d="M255 245 C195 220 155 215 120 205" />
-        <path id="lineTR" d="M345 245 C405 220 445 215 480 205" />
-        <path id="lineBL" d="M255 355 C195 390 165 425 135 455" />
-        <path id="lineBR" d="M345 355 C405 390 435 425 465 455" />
+        <path id="lineTop" d="M300 228 C300 202 300 175 300 150" />
+        <path id="lineTL" d="M246 231 C196 218 156 213 120 205" />
+        <path id="lineTR" d="M354 231 C404 218 444 213 480 205" />
+        <path id="lineBL" d="M270 352 C200 390 165 425 135 455" />
+        <path id="lineBR" d="M330 352 C400 390 435 425 465 455" />
     </g>
 
     <!-- traveling data packets -->
     <g fill="#e0f7ff" filter="url(#neonGlow)">
         <circle r="3.4">
-            <animateMotion dur="3.2s" begin="0s" repeatCount="indefinite" path="M300 225 C300 195 300 165 300 150" />
+            <animateMotion dur="3.2s" begin="0s" repeatCount="indefinite" path="M300 228 C300 202 300 175 300 150" />
             <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="3.2s"
                 repeatCount="indefinite" />
         </circle>
         <circle r="3.4">
             <animateMotion dur="3.2s" begin="0.5s" repeatCount="indefinite"
-                path="M255 245 C195 220 155 215 120 205" />
+                path="M246 231 C196 218 156 213 120 205" />
             <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="3.2s"
                 repeatCount="indefinite" />
         </circle>
         <circle r="3.4">
-            <animateMotion dur="3.2s" begin="1s" repeatCount="indefinite" path="M345 245 C405 220 445 215 480 205" />
+            <animateMotion dur="3.2s" begin="1s" repeatCount="indefinite" path="M354 231 C404 218 444 213 480 205" />
             <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="3.2s"
                 repeatCount="indefinite" />
         </circle>
         <circle r="3.4">
             <animateMotion dur="3.2s" begin="1.5s" repeatCount="indefinite"
-                path="M255 355 C195 390 165 425 135 455" />
+                path="M270 352 C200 390 165 425 135 455" />
             <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="3.2s"
                 repeatCount="indefinite" />
         </circle>
         <circle r="3.4">
-            <animateMotion dur="3.2s" begin="2s" repeatCount="indefinite" path="M345 355 C405 390 435 425 465 455" />
+            <animateMotion dur="3.2s" begin="2s" repeatCount="indefinite" path="M330 352 C400 390 435 425 465 455" />
             <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="3.2s"
                 repeatCount="indefinite" />
         </circle>
     </g>
 
-    <!-- central globe: earth from above, at night -->
-    <circle cx="300" cy="300" r="84" fill="none" stroke="rgba(34,211,238,0.22)" stroke-width="8"
-        filter="url(#softBlur)" />
+    <!-- central computer: monitor with live code on screen -->
     <g filter="url(#neonGlowSoft)">
-        <circle cx="300" cy="300" r="75" fill="#050912" stroke="url(#lineGrad)" stroke-width="2" />
+        <rect x="225" y="228" width="150" height="104" rx="10" fill="#050912" stroke="url(#lineGrad)"
+            stroke-width="2" />
+        <rect x="289" y="332" width="22" height="16" fill="#050912" stroke="rgba(125,211,252,0.35)"
+            stroke-width="1.3" />
+        <rect x="262" y="348" width="76" height="8" rx="4" fill="#050912" stroke="rgba(125,211,252,0.35)"
+            stroke-width="1.3" />
     </g>
-    <g clip-path="url(#globeClip)">
-        <!-- continents, stylised -->
-        <path d="M245,265 C232,272 224,292 231,312 C235,328 248,342 262,338 C274,334 275,314 271,296 C269,280 260,260 245,265 Z"
-            fill="#3f6f96" />
-        <path d="M300,246 C286,252 281,270 286,288 C280,304 283,332 299,349 C314,338 321,314 315,298 C323,282 318,258 300,246 Z"
-            fill="#4a7ba3" />
-        <path d="M328,268 C320,278 322,296 331,307 C327,320 335,335 351,329 C363,321 361,300 353,289 C356,276 343,260 328,268 Z"
-            fill="#3a6a90" />
-        <path d="M312,352 C308,362 312,372 321,373 C327,374 331,366 329,357 C327,350 316,346 312,352 Z" fill="#3a6a90" />
-        <!-- great-circle network lines crossing the globe -->
-        <g fill="none" stroke="#e0f7ff" stroke-width="1.3" opacity="0.95" filter="url(#neonGlowSoft)">
-            <path id="arcA" d="M250,300 Q276,260 302,292" />
-            <path id="arcB" d="M306,312 Q324,338 348,300" />
+    <rect x="234" y="237" width="132" height="78" rx="4" fill="#0a1220" stroke="rgba(125,211,252,0.3)"
+        stroke-width="1" />
+    <g fill="rgba(224,247,255,0.45)">
+        <circle cx="241" cy="232.5" r="1.7" />
+        <circle cx="248" cy="232.5" r="1.7" />
+        <circle cx="255" cy="232.5" r="1.7" />
+    </g>
+    <g clip-path="url(#screenClip)">
+        <!-- code lines on screen -->
+        <g rx="2">
+            <rect x="242" y="248" width="50" height="4" rx="2" fill="#7dd3fc" />
+            <rect x="250" y="258" width="80" height="4" rx="2" fill="rgba(224,247,255,0.55)" />
+            <rect x="258" y="268" width="40" height="4" rx="2" fill="#a5b4fc" />
+            <rect x="250" y="278" width="65" height="4" rx="2" fill="rgba(224,247,255,0.55)" />
+            <rect x="242" y="288" width="35" height="4" rx="2" fill="#7dd3fc" />
+            <rect x="258" y="298" width="55" height="4" rx="2" fill="rgba(224,247,255,0.55)" />
+            <rect x="250" y="308" width="25" height="4" rx="2" fill="#a5b4fc" />
         </g>
-        <g fill="#e0f7ff">
-            <circle r="2.4">
-                <animateMotion dur="2.6s" begin="0.3s" repeatCount="indefinite" path="M250,300 Q276,260 302,292" />
-                <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="2.6s"
-                    repeatCount="indefinite" />
-            </circle>
-            <circle r="2.4">
-                <animateMotion dur="2.6s" begin="1.4s" repeatCount="indefinite" path="M306,312 Q324,338 348,300" />
-                <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="2.6s"
-                    repeatCount="indefinite" />
-            </circle>
-        </g>
+        <rect x="279" y="306.5" width="3" height="8" fill="#e0f7ff">
+            <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+        </rect>
     </g>
-    <!-- city lights -->
-    <g fill="#e0f7ff" clip-path="url(#globeClip)">
-        <circle cx="248" cy="288" r="2.2">
-            <animate attributeName="opacity" values="1;0.2;1" dur="2.1s" begin="0s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="300" cy="270" r="2.2">
-            <animate attributeName="opacity" values="1;0.2;1" dur="2.1s" begin="0.5s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="305" cy="322" r="2.2">
-            <animate attributeName="opacity" values="1;0.2;1" dur="2.1s" begin="1s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="340" cy="296" r="2.2">
-            <animate attributeName="opacity" values="1;0.2;1" dur="2.1s" begin="1.5s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="345" cy="308" r="2.2">
-            <animate attributeName="opacity" values="1;0.2;1" dur="2.1s" begin="2s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="260" cy="320" r="2.2">
-            <animate attributeName="opacity" values="1;0.2;1" dur="2.1s" begin="0.8s" repeatCount="indefinite" />
-        </circle>
-    </g>
+    <circle cx="330" cy="352" r="1.8" fill="#22d3ee">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite" />
+    </circle>
 
     <!-- nodes -->
     <g>
