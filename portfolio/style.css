@@ -269,6 +269,8 @@ button {
 
 /* Main */
 .main-content {
+    flex: 1 1 auto;
+    min-width: 0;
     padding: 56px 72px;
     margin-left: clamp(220px, 16vw, 280px);
 }
@@ -336,7 +338,10 @@ button {
     flex-direction: column;
     justify-content: center;
     gap: 32px;
-    min-height: calc(100vh - 112px);
+    margin: -56px -72px 0;
+    width: calc(100% + 144px);
+    padding: 0 72px;
+    min-height: 100vh;
 }
 
 .hero::before {
@@ -356,8 +361,14 @@ button {
     height: 100%;
     object-fit: cover;
     object-position: 70% 18%;
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 34%, #000 62%, #000 100%);
-    mask-image: linear-gradient(to right, transparent 0%, transparent 34%, #000 62%, #000 100%);
+    -webkit-mask-image:
+        linear-gradient(to right, transparent 0%, transparent 34%, #000 62%, #000 100%),
+        linear-gradient(to bottom, #000 0%, #000 72%, transparent 97%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+        linear-gradient(to right, transparent 0%, transparent 34%, #000 62%, #000 100%),
+        linear-gradient(to bottom, #000 0%, #000 72%, transparent 97%);
+    mask-composite: intersect;
     pointer-events: none;
 }
 
@@ -700,10 +711,22 @@ button {
         width: 100%;
     }
 
+    .hero {
+        margin: -40px -28px 0;
+        width: calc(100% + 56px);
+        padding: 0 28px;
+    }
+
     .hero__portrait {
         object-position: 76% 14%;
-        -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 28%, #000 58%, #000 100%);
-        mask-image: linear-gradient(to right, transparent 0%, transparent 28%, #000 58%, #000 100%);
+        -webkit-mask-image:
+            linear-gradient(to right, transparent 0%, transparent 28%, #000 58%, #000 100%),
+            linear-gradient(to bottom, #000 0%, #000 72%, transparent 97%);
+        -webkit-mask-composite: source-in;
+        mask-image:
+            linear-gradient(to right, transparent 0%, transparent 28%, #000 58%, #000 100%),
+            linear-gradient(to bottom, #000 0%, #000 72%, transparent 97%);
+        mask-composite: intersect;
     }
 
     .hero__portrait-veil {
@@ -727,6 +750,12 @@ button {
 @media (max-width: 1200px) {
     .section {
         padding-inline: 8vw;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .hero {
+        padding-inline: 72px;
     }
 }
 
@@ -778,6 +807,8 @@ button {
     }
 
     .hero {
+        margin: -32px -20px 0;
+        width: calc(100% + 40px);
         min-height: auto;
         padding: 2.5rem 1.5rem 1rem;
         gap: 24px;
