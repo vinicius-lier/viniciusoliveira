@@ -371,4 +371,18 @@
 .development-areas p { line-height:1.8; margin-bottom:16px; color:#c7d3dd; }
 @media(max-width:650px) { .development-areas { grid-template-columns:1fr; gap:20px; } }
 
-@media(min-width:601px) { .two-worlds .copy-tech h2 { font-size:clamp(34px,4.1vw,60px); } }
+/* Size the long headline against the panel content, rather than the viewport. */
+.two-worlds .copy-tech { container-type:inline-size; }
+.two-worlds .copy-tech h2 { font-stretch:100%; font-size:clamp(18px,9.5cqi,52px); max-width:100%; overflow-wrap:anywhere; }
+
+/* Keep warm Judô accents out of technology states. */
+.two-worlds[data-world="tech"] .world-nav nav a:hover,
+.two-worlds[data-world="tech"] .text-link:hover { color:#a0f5fa; text-shadow:none; }
+.two-worlds[data-world="tech"] .world-actions a::after { background:#72d9df; }
+.two-worlds[data-world="tech"] .world-actions a { border-color:#72d9df70; }
+.two-worlds[data-world="tech"] .section-number { color:#88cbd5; }
+.two-worlds[data-world="tech"] .project-card:hover { border-color:#72d9df60; background:#101f2a; }
+.two-worlds[data-world="tech"] :focus-visible { outline-color:#72d9df; }
+.two-worlds[data-world="tech"] ::selection { background:#72d9df; color:#080f17; }
+.two-worlds[data-world="tech"] .contact-form input,
+.two-worlds[data-world="tech"] .contact-form textarea { caret-color:#72d9df; }
