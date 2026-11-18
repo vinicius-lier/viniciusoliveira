@@ -22,3 +22,6 @@ Conteúdo existente. Artes fornecidas em Downloads: Sensei Vinicius_ Tecnologia 
 
 ## Atualização informada pelo usuário
 No momento não dá aulas. Treina na Equipe de Judô da Prefeitura de Piraí e atua como árbitro e atleta. Esta informação substitui afiliação atual ao Judô Clube Solera e oferta de aulas/visitas na Academia 63; referências históricas permanecem.
+
+## Hierarquia do Judô corrigida pelo usuário
+A abertura destaca a filosofia de ensino: formação humana antes de resultados, respeito, escuta e cuidado. A condição atual de árbitro e atleta, sem aulas no momento, permanece na trajetória e no contato; não é o destaque da abertura.
