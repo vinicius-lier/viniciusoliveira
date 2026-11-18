@@ -229,3 +229,6 @@ Marca TI: monograma VO em três linhas de fibra óptica, branco e ciano, derivad
 
 
 Área de TI dá destaque explícito a desenvolvimento web e automações na abertura e em seção própria, com exemplos dos projetos existentes e sem novas alegações de resultado.
+
+
+Currículo alinhado à identidade de TI: Archivo, marca VO fibra, cabeçalho horizontal, fundo grafite e acentos ciano, documento legível sem a antiga barra lateral. Perfil destaca web e automações; CICLO incluído. Botão salva a página atual pelo diálogo de impressão/PDF, com tema de impressão claro. Histórico e formação preservados.

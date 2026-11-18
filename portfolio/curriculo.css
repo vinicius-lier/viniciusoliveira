@@ -1,0 +1,55 @@
+/* Curriculum shares the technology identity while retaining a readable document layout. */
+.curriculo-page { --body-bg:#080f17; --text-main:#f3f1ec; --text-muted:#bac9d4; --accent:#72d9df; background:#080f17; font-family:"Archivo",sans-serif; color:var(--text-main); }
+.curriculo-page ::selection { background:#72d9df; color:#080f17; }
+.curriculo-page :focus-visible { outline:2px solid #72d9df; outline-offset:5px; }
+.cv-skip { position:absolute; top:-80px; left:20px; z-index:5; padding:14px; background:#72d9df; color:#080f17; }
+.cv-skip:focus { top:10px; }
+.cv-nav { display:flex; align-items:center; justify-content:space-between; gap:28px; padding:24px 5vw; border-bottom:1px solid #72d9df20; background:#080f17; }
+.cv-brand { display:flex; align-items:center; gap:13px; flex-shrink:0; }
+.cv-brand img { width:78px; height:44px; }
+.cv-brand > span { font-size:15px; font-weight:600; letter-spacing:.065em; line-height:1.15; }
+.cv-brand > span > span { display:block; font-size:16px; letter-spacing:.1em; }
+.cv-nav nav { display:flex; align-items:center; gap:25px; font-size:13px; flex-wrap:wrap; }
+.cv-nav nav a { padding-block:8px; }
+.cv-nav a[aria-current] { border-bottom:2px solid #72d9df; }
+.cv-nav a:hover,.curriculo-page .cv-document a:hover { color:#a0f5fa; }
+.curriculo-page .layout { display:block; }
+.curriculo-page .main-content { margin:0; width:100%; padding:54px 5vw; }
+.curriculo-page .cv-document { width:100%; max-width:1080px; margin:0 auto; padding:clamp(24px,5vw,64px); background:#0c151ee8; border:1px solid #72d9df25; border-radius:12px; box-shadow:none; }
+.curriculo-page .section-title { font-family:"Archivo",sans-serif; font-size:clamp(30px,4vw,49px); font-weight:600; line-height:1.12; letter-spacing:-.025em; background:none; color:#f3f1ec; -webkit-text-fill-color:currentColor; overflow-wrap:anywhere; }
+.curriculo-page .section-subtitle { font-size:26px; font-weight:500; margin:48px 0 22px; color:#f3f1ec; }
+.curriculo-page .section-subtitle::after,.curriculo-page .feature-list li::before { background:#72d9df; }
+.curriculo-page .curriculo-role { line-height:1.65; margin:16px 0; color:#b9e5e8; }
+.curriculo-page .curriculo-contact { line-height:1.8; overflow-wrap:anywhere; }
+.curriculo-page .curriculo-header { margin-bottom:32px; gap:26px; }
+.curriculo-page .section__content p,.curriculo-page .curriculo-entry p,.curriculo-page .feature-list { line-height:1.8; }
+.curriculo-page .curriculo-entry { padding-bottom:25px; margin-bottom:25px; border-bottom:1px solid #ffffff14; }
+.curriculo-page .curriculo-entry-head h3 { font-size:19px; line-height:1.4; }
+.curriculo-page .curriculo-meta { font-style:normal; color:#aec9d4; }
+.curriculo-page .curriculo-period { color:#a7cbd5; }
+.curriculo-page .tag-list li { background:transparent; border-color:#72d9df35; color:#c4dce5; }
+.curriculo-page .btn--primary { background:#72d9df; color:#080f17; border:1px solid #72d9df; box-shadow:none; border-radius:4px; font-family:inherit; }
+.curriculo-page .btn--primary:hover { background:#a0f5fa; transform:none; box-shadow:none; }
+.curriculo-page .cv-document a:not(.btn) { color:#9be8ed; text-underline-offset:4px; }
+.cv-footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; max-width:1080px; margin:0 auto; padding:0 5vw 40px; font-size:13px; color:#bac9d4; }
+@media(max-width:650px) {
+ .cv-nav { padding:18px 5vw; align-items:flex-start; gap:16px; flex-direction:column; }
+ .cv-nav nav { gap:17px; font-size:12px; }
+ .curriculo-page .main-content { padding:28px 5vw; }
+ .curriculo-page .section-subtitle { font-size:23px; }
+ .curriculo-page .curriculo-contact { display:block; font-size:13px; }
+ .curriculo-page .curriculo-contact li { margin-top:8px; }
+ .curriculo-page .curriculo-header .btn { width:100%; }
+ .curriculo-page .curriculo-entry-head { display:block; }
+}
+@media print {
+ .curriculo-page { background:white; color:#111; font-size:10pt; }
+ .cv-nav,.cv-skip,.no-print,.cv-footer { display:none!important; }
+ .curriculo-page .main-content { padding:0; }
+ .curriculo-page .cv-document { border:0; border-radius:0; padding:0; max-width:none; background:white; }
+ .curriculo-page .section-title,.curriculo-page .section-subtitle,.curriculo-page .curriculo-entry-head h3 { color:#111; -webkit-text-fill-color:currentColor; }
+ .curriculo-page p,.curriculo-page li,.curriculo-page a,.curriculo-page span { color:#222!important; }
+ .curriculo-page .section-subtitle { break-after:avoid; margin-top:26px; }
+ .curriculo-page .curriculo-entry-head { break-after:avoid; }
+ .curriculo-page .curriculo-entry { border-color:#ddd; }
+}
