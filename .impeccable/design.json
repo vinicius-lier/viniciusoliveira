@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-17T22:08:09.375510+00:00",
+  "title": "Design System: Vinícius Oliveira",
+  "extensions": {
+    "shadows": [
+      {
+        "name": "porta",
+        "value": "20px 0 60px #0008",
+        "purpose": "Profundidade da porta durante a oclusão."
+      },
+      {
+        "name": "hero-ambient",
+        "value": "0 22px 70px #0005",
+        "purpose": "Separar o painel da abertura e o ambiente."
+      },
+      {
+        "name": "door-message",
+        "value": "0 12px 40px #0004",
+        "purpose": "Profundidade da mensagem de passagem."
+      }
+    ],
+    "motion": [
+      {
+        "name": "door-cover",
+        "value": "400ms",
+        "purpose": "Cobrir a tela antes da troca."
+      },
+      {
+        "name": "door-reveal",
+        "value": "500ms",
+        "purpose": "Revelar o mundo escolhido."
+      },
+      {
+        "name": "door-easing",
+        "value": "cubic-bezier(.4,0,.2,1)",
+        "purpose": "Easing das duas fases."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0ms",
+        "purpose": "Troca instantânea sem porta."
+      },
+      {
+        "name": "character-entry",
+        "value": "850ms",
+        "purpose": "Entrada do personagem alpha."
+      },
+      {
+        "name": "background-entry",
+        "value": "950ms",
+        "purpose": "Entrada do ambiente."
+      },
+      {
+        "name": "panel-entry",
+        "value": "650ms",
+        "purpose": "Entrada do painel."
+      },
+      {
+        "name": "entry-easing",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Entradas e microinterações."
+      },
+      {
+        "name": "story-change",
+        "value": "240ms",
+        "purpose": "Troca manual de capítulo; omitida com movimento reduzido."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact",
+        "value": "900px"
+      },
+      {
+        "name": "mobile",
+        "value": "600px"
+      },
+      {
+        "name": "sensei-compact",
+        "value": "800px"
+      }
+    ],
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Vermelho de passagem",
+        "tonalRamp": [
+          "oklch(15% 0.15 27)",
+          "oklch(25% 0.15 27)",
+          "oklch(35% 0.15 27)",
+          "oklch(45% 0.15 27)",
+          "oklch(55% 0.15 27)",
+          "oklch(65% 0.15 27)",
+          "oklch(80% 0.15 27)",
+          "oklch(95% 0.15 27)"
+        ]
+      },
+      "neutral-bg": {
+        "role": "neutral",
+        "displayName": "Noite azulada",
+        "tonalRamp": [
+          "oklch(15% 0.025 260)",
+          "oklch(25% 0.025 260)",
+          "oklch(35% 0.025 260)",
+          "oklch(45% 0.025 260)",
+          "oklch(55% 0.025 260)",
+          "oklch(65% 0.025 260)",
+          "oklch(80% 0.025 260)",
+          "oklch(95% 0.025 260)"
+        ]
+      },
+      "text-main": {
+        "role": "neutral",
+        "displayName": "Branco suave",
+        "tonalRamp": [
+          "oklch(15% 0.008 90)",
+          "oklch(25% 0.008 90)",
+          "oklch(35% 0.008 90)",
+          "oklch(45% 0.008 90)",
+          "oklch(55% 0.008 90)",
+          "oklch(65% 0.008 90)",
+          "oklch(80% 0.008 90)",
+          "oklch(95% 0.008 90)"
+        ]
+      },
+      "text-copy": {
+        "role": "neutral",
+        "displayName": "Cinza de leitura",
+        "tonalRamp": [
+          "oklch(15% 0.015 255)",
+          "oklch(25% 0.015 255)",
+          "oklch(35% 0.015 255)",
+          "oklch(45% 0.015 255)",
+          "oklch(55% 0.015 255)",
+          "oklch(65% 0.015 255)",
+          "oklch(80% 0.015 255)",
+          "oklch(95% 0.015 255)"
+        ]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Cinza secundário",
+        "tonalRamp": [
+          "oklch(15% 0.02 250)",
+          "oklch(25% 0.02 250)",
+          "oklch(35% 0.02 250)",
+          "oklch(45% 0.02 250)",
+          "oklch(55% 0.02 250)",
+          "oklch(65% 0.02 250)",
+          "oklch(80% 0.02 250)",
+          "oklch(95% 0.02 250)"
+        ]
+      },
+      "hero-panel": {
+        "role": "neutral",
+        "displayName": "Vidro da abertura",
+        "tonalRamp": [
+          "oklch(15% 0.025 260)",
+          "oklch(25% 0.025 260)",
+          "oklch(35% 0.025 260)",
+          "oklch(45% 0.025 260)",
+          "oklch(55% 0.025 260)",
+          "oklch(65% 0.025 260)",
+          "oklch(80% 0.025 260)",
+          "oklch(95% 0.025 260)"
+        ]
+      },
+      "section-panel": {
+        "role": "neutral",
+        "displayName": "Vidro de seção",
+        "tonalRamp": [
+          "oklch(15% 0.025 260)",
+          "oklch(25% 0.025 260)",
+          "oklch(35% 0.025 260)",
+          "oklch(45% 0.025 260)",
+          "oklch(55% 0.025 260)",
+          "oklch(65% 0.025 260)",
+          "oklch(80% 0.025 260)",
+          "oklch(95% 0.025 260)"
+        ]
+      },
+      "card-panel": {
+        "role": "neutral",
+        "displayName": "Vidro de card",
+        "tonalRamp": [
+          "oklch(15% 0.025 250)",
+          "oklch(25% 0.025 250)",
+          "oklch(35% 0.025 250)",
+          "oklch(45% 0.025 250)",
+          "oklch(55% 0.025 250)",
+          "oklch(65% 0.025 250)",
+          "oklch(80% 0.025 250)",
+          "oklch(95% 0.025 250)"
+        ]
+      },
+      "field-bg": {
+        "role": "neutral",
+        "displayName": "Campo escuro",
+        "tonalRamp": [
+          "oklch(15% 0.025 260)",
+          "oklch(25% 0.025 260)",
+          "oklch(35% 0.025 260)",
+          "oklch(45% 0.025 260)",
+          "oklch(55% 0.025 260)",
+          "oklch(65% 0.025 260)",
+          "oklch(80% 0.025 260)",
+          "oklch(95% 0.025 260)"
+        ]
+      },
+      "border-panel": {
+        "role": "neutral",
+        "displayName": "Borda clara",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(25% 0 0)",
+          "oklch(35% 0 0)",
+          "oklch(45% 0 0)",
+          "oklch(55% 0 0)",
+          "oklch(65% 0 0)",
+          "oklch(80% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "Dourado de foco",
+        "tonalRamp": [
+          "oklch(15% 0.07 80)",
+          "oklch(25% 0.07 80)",
+          "oklch(35% 0.07 80)",
+          "oklch(45% 0.07 80)",
+          "oklch(55% 0.07 80)",
+          "oklch(65% 0.07 80)",
+          "oklch(80% 0.07 80)",
+          "oklch(95% 0.07 80)"
+        ]
+      },
+      "judo-bg": {
+        "role": "neutral",
+        "displayName": "Carvão do dojo",
+        "tonalRamp": [
+          "oklch(15% 0.004 330)",
+          "oklch(25% 0.004 330)",
+          "oklch(35% 0.004 330)",
+          "oklch(45% 0.004 330)",
+          "oklch(55% 0.004 330)",
+          "oklch(65% 0.004 330)",
+          "oklch(80% 0.004 330)",
+          "oklch(95% 0.004 330)"
+        ]
+      },
+      "judo-panel": {
+        "role": "neutral",
+        "displayName": "Vidro neutro do dojo",
+        "tonalRamp": [
+          "oklch(15% 0.004 330)",
+          "oklch(25% 0.004 330)",
+          "oklch(35% 0.004 330)",
+          "oklch(45% 0.004 330)",
+          "oklch(55% 0.004 330)",
+          "oklch(65% 0.004 330)",
+          "oklch(80% 0.004 330)",
+          "oklch(95% 0.004 330)"
+        ]
+      },
+      "judo-footer": {
+        "role": "neutral",
+        "displayName": "Rodapé do dojo",
+        "tonalRamp": [
+          "oklch(15% 0.004 330)",
+          "oklch(25% 0.004 330)",
+          "oklch(35% 0.004 330)",
+          "oklch(45% 0.004 330)",
+          "oklch(55% 0.004 330)",
+          "oklch(65% 0.004 330)",
+          "oklch(80% 0.004 330)",
+          "oklch(95% 0.004 330)"
+        ]
+      },
+      "judo-hero-panel": {
+        "role": "neutral",
+        "displayName": "Vidro da abertura de judô",
+        "tonalRamp": [
+          "oklch(15% 0.02 30)",
+          "oklch(25% 0.02 30)",
+          "oklch(35% 0.02 30)",
+          "oklch(45% 0.02 30)",
+          "oklch(55% 0.02 30)",
+          "oklch(65% 0.02 30)",
+          "oklch(80% 0.02 30)",
+          "oklch(95% 0.02 30)"
+        ]
+      },
+      "judo-field": {
+        "role": "neutral",
+        "displayName": "Campo do dojo",
+        "tonalRamp": [
+          "oklch(15% 0.02 30)",
+          "oklch(25% 0.02 30)",
+          "oklch(35% 0.02 30)",
+          "oklch(45% 0.02 30)",
+          "oklch(55% 0.02 30)",
+          "oklch(65% 0.02 30)",
+          "oklch(80% 0.02 30)",
+          "oklch(95% 0.02 30)"
+        ]
+      },
+      "sensei-copy": {
+        "role": "neutral",
+        "displayName": "Texto de memórias",
+        "tonalRamp": [
+          "oklch(15% 0.02 30)",
+          "oklch(25% 0.02 30)",
+          "oklch(35% 0.02 30)",
+          "oklch(45% 0.02 30)",
+          "oklch(55% 0.02 30)",
+          "oklch(65% 0.02 30)",
+          "oklch(80% 0.02 30)",
+          "oklch(95% 0.02 30)"
+        ]
+      },
+      "sensei-link": {
+        "role": "neutral",
+        "displayName": "Rosa de navegação do dojo",
+        "tonalRamp": [
+          "oklch(15% 0.02 30)",
+          "oklch(25% 0.02 30)",
+          "oklch(35% 0.02 30)",
+          "oklch(45% 0.02 30)",
+          "oklch(55% 0.02 30)",
+          "oklch(65% 0.02 30)",
+          "oklch(80% 0.02 30)",
+          "oklch(95% 0.02 30)"
+        ]
+      }
+    }
+  },
+  "components": [
+    {
+      "name": "Button primary",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Botão de contorno da homepage.",
+      "html": "<button class=\"ds-button-primary\">Continuar no WhatsApp</button>",
+      "css": ".ds-button-primary{font-family:Archivo,sans-serif;display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border:1px solid #a5bdcd70;border-radius:4px;color:#f3f1ec;background:transparent;font-weight:500;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;}.ds-button-primary:hover{background:#c0d7e715;transform:none;}.ds-button-primary:focus-visible{outline:2px solid var(--accent,#e0463d);outline-offset:3px;}"
+    },
+    {
+      "name": "Button secondary",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Botão de contorno da homepage.",
+      "html": "<button class=\"ds-button-secondary\">Ver case</button>",
+      "css": ".ds-button-secondary{font-family:Archivo,sans-serif;display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border:1px solid #a5bdcd70;border-radius:4px;color:#f3f1ec;background:transparent;font-weight:500;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;}.ds-button-secondary:hover{background:#c0d7e715;transform:none;}.ds-button-secondary:focus-visible{outline:2px solid var(--accent,#e0463d);outline-offset:3px;}"
+    },
+    {
+      "name": "Campo",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Campo do formulário compartilhado.",
+      "html": "<label class=\"ds-label\">Seu nome<input class=\"ds-field\" autocomplete=\"name\"></label>",
+      "css": ".ds-label{font-family:Archivo,sans-serif;display:grid;gap:9px;color:#eee5dd;font-size:14px}.ds-field{font-family:Archivo,sans-serif;padding:13px 15px;color:#f3f1ec;background:#080d15;border:1px solid #ffffff40;border-radius:5px}.ds-field:focus-visible{outline:2px solid #e4c28b;outline-offset:6px;}"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Competência ou tecnologia informativa.",
+      "html": "<span class=\"ds-tag\">Python</span>",
+      "css": ".ds-tag{font-family:Archivo,sans-serif;display:inline-block;border:1px solid #ffffff25;background:transparent;color:#f3f1ec;border-radius:999px;padding:5px 12px;font-size:.82rem}"
+    },
+    {
+      "name": "Card de projeto",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Superfície dos projetos, com link de case.",
+      "html": "<article class=\"ds-card\"><h3>Travapon</h3><p>Automação operacional e integração de sistemas.</p><a href=\"#case\">Ver case</a></article>",
+      "css": ".ds-card{font-family:Archivo,sans-serif;padding:16px;background:#0e1720b3;border:1px solid #ffffff18;border-radius:12px;color:#f3f1ec}.ds-card h3{font-size:1.3rem;font-weight:600}.ds-card p{font-size:.95rem;line-height:1.6;color:#cbd3dc}.ds-card a{color:inherit;text-underline-offset:5px}.ds-card a:hover{text-decoration:underline}.ds-card a:focus-visible{outline:2px solid #e4c28b;outline-offset:6px;}"
+    },
+    {
+      "name": "Navegação dos mundos",
+      "kind": "nav",
+      "description": "Estado ativo por mundo e links compartilhados.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#tecnologia\" aria-current=\"page\">Tecnologia</a><a href=\"#judo\">Judô</a><a href=\"#projects\">Projetos</a><a href=\"#contact\">Contato</a></nav>",
+      "css": ".ds-nav{font-family:Archivo,sans-serif;display:flex;gap:24px;padding:25px;background:#0b1018;font-size:13px;color:#fff}.ds-nav a{color:inherit;text-decoration:none;padding:10px 0;text-underline-offset:7px}.ds-nav a[aria-current=\"page\"]{border-bottom:2px solid #e0463d}.ds-nav a:hover{text-decoration:underline}.ds-nav a:focus-visible{outline:2px solid #e4c28b;outline-offset:6px;}"
+    },
+    {
+      "name": "Controle de carrossel",
+      "kind": "button",
+      "refersTo": "carousel-control",
+      "description": "Avançar capítulos ou páginas, com estado desabilitado na paginação.",
+      "html": "<button class=\"ds-control\" aria-label=\"Próximo\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"m9 5 7 7-7 7\"/></svg></button>",
+      "css": ".ds-control{font-family:Archivo,sans-serif;display:grid;place-items:center;width:46px;height:46px;border:1px solid #ffffff40;border-radius:50%;background:transparent;color:#f3f1ec;transition:background 150ms,border-color 150ms}.ds-control:hover{background:#c43e3028;border-color:#d88c83}.ds-control:focus-visible{outline:2px solid #e4c28b;outline-offset:6px}.ds-control:disabled{opacity:.35;cursor:default}"
+    },
+    {
+      "name": "Marco de trajetória",
+      "kind": "custom",
+      "description": "Expansão nativa de marco anual do acervo.",
+      "html": "<details class=\"ds-year\"><summary>2017 — Trajetória</summary><p>Registro do acervo de judô.</p></details>",
+      "css": ".ds-year{font-family:Archivo,sans-serif;background:#111011eb;border-bottom:1px solid #ffffff25;color:#d9d0c8}.ds-year summary{cursor:pointer;padding:24px 34px 24px 0;font-size:20px;line-height:1.5;color:#f2e7de}.ds-year summary::marker{color:#db837a}.ds-year[open] summary{color:#ffb6ac}.ds-year summary:focus-visible{outline:2px solid #e4c28b;outline-offset:6px}.ds-year p{font-size:15px;line-height:1.85;padding-bottom:32px}"
+    },
+    {
+      "name": "Superfície de ampliação",
+      "kind": "custom",
+      "refersTo": "lightbox",
+      "description": "Superfície visual do dialog nativo; abrir/fechar e foco pertencem ao JS do produto.",
+      "html": "<section class=\"ds-lightbox\" aria-label=\"Prévia da ampliação\"><button aria-label=\"Fechar\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"m6 6 12 12M6 18 18 6\"/></svg></button><p>Foto do acervo</p></section>",
+      "css": ".ds-lightbox{font-family:Archivo,sans-serif;position:relative;min-height:160px;padding:55px 65px 25px;background:#0d0c0df7;color:#f7ece7;border:1px solid #ffffff30;border-radius:10px}.ds-lightbox p{text-align:center;font-size:13px}.ds-lightbox button{position:absolute;right:10px;top:10px;width:44px;height:44px;border:1px solid #ffffff55;border-radius:50%;background:#181414;color:#f7ece7;font-size:24px}.ds-lightbox button:focus-visible{outline:2px solid #e4c28b;outline-offset:6px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Dois mundos, a mesma dedicação",
+    "overview": "Dois mundos de uma mesma pessoa: tecnologia e judô apresentados por personagens de anime em camadas sobre ambientes vazios. A identidade usa Archivo, fundo quase preto, vermelho discreto e painéis translúcidos para separar leitura e imagem. No judô, a marca Sakura fornecida pelo usuário e o acervo fotográfico real convivem com a abertura ilustrada; o texto permanece em superfícies escuras.\n\nO registro descreve a homepage estática em `portfolio/index.html`, com `style.css`, `worlds.css`, `worlds.js`, `sensei.css` e `sensei.js`. As páginas de cases e currículo conservam estilos independentes e não têm sua identidade redefinida aqui. A decisão atual em `PRODUCT.md` e `.impeccable/home-brief.md` substitui o contrato anterior de rolagem cinematográfica.",
+    "keyCharacteristics": [
+      "Personagens alpha derivados das artes autorizadas, ambientes mascarados e acervo real de judô.",
+      "Archivo em títulos e texto, com hierarquia por escala e peso.",
+      "Painéis escuros, bordas claras finas e acento vermelho restrito."
+    ],
+    "rules": [
+      {
+        "name": "The Texto sobre Painel Rule",
+        "body": "Sobre a arte, preservar uma superfície escura entre texto e imagem.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do manter a leitura sobre painéis escuros ao sobrepor arte.",
+      "Do preservar a troca reversível entre Tecnologia e Judô e o estado ativo na navegação.",
+      "Do trocar imediatamente de mundo quando prefers-reduced-motion estiver ativo."
+    ],
+    "donts": [
+      "Don't voltar à abertura longa controlada por rolagem: a seleção por clique a substituiu.",
+      "Don't apresentar ilustração estática como filmagem de uma pessoa.",
+      "Don't inventar conquistas, datas e graduação; preservar os fatos e o acervo autorizados da fonte Sensei."
+    ]
+  }
+}

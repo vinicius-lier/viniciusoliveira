@@ -4,102 +4,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinicius Oliveira</title>
+    <title>Vinícius Oliveira | Tecnologia e Judô</title>
+    <meta name="description" content="Dois mundos, a mesma dedicação. Conheça os projetos em tecnologia e a atuação de Vinícius Oliveira como professor de judô.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,400;100,500;100,600;125,600&display=swap"
         rel="stylesheet">
     <link rel="icon" href="./logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./worlds.css?v=logo-fibra-3">
+    <link rel="stylesheet" href="./sensei.css?v=logo-fibra-3">
+    <link rel="preload" as="image" href="./assets/worlds/personagem-ti.webp">
 </head>
 
-<body>
+<body class="two-worlds" data-world="tech">
     <div class="layout">
-        <!-- Navbar -->
-        <aside class="sidebar" id="sidebar">
-            <div class="sidebar__inner">
-                <a href="#home" class="brand" aria-label="Vinicius Oliveira logo">
-                    <span>Vinícius.</span>
-                </a>
-            </div>
-            <nav class="sidebar-nav" aria-label="Primary">
-                <a href="#home" class="sidebar__link">Home</a>
-                <a href="#about" class="sidebar__link">Sobre</a>
-                <a href="#redes" class="sidebar__link">Redes</a>
-                <a href="#projects" class="sidebar__link">Projetos</a>
-                <a href="#contact" class="sidebar__link">Contato</a>
-                <a href="curriculo.html" class="sidebar__link">
-                    Currículo
-                </a>
+        <a class="skip-link" href="#about">Pular apresentação</a>
+        <header class="world-nav">
+            <a class="world-brand" href="#home" aria-label="Vinícius Oliveira, início"><span class="brand-tech tech-signature"><img src="./assets/brand/vo-fibra.svg" alt="" width="320" height="164"><span class="tech-wordmark">VINÍCIUS<span>OLIVEIRA</span></span></span><img class="brand-sensei" src="./assets/sensei/brand/sensei-sakura.webp" alt="Sensei Vinícius" width="1000" height="366"></a>
+            <nav aria-label="Navegação principal">
+                <a href="#tecnologia" data-switch-world="tech" aria-current="page">Tecnologia</a>
+                <a href="#judo" data-switch-world="judo">Judô</a>
+                <a href="#projects" data-project-nav>Projetos</a>
+                <a href="#contact">Contato</a>
+                <a class="nav-resume" href="curriculo.html" data-world-content="tech">Currículo <svg class="arrow-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
             </nav>
-            <div class="sidebar__social">
-                <a href="https://github.com/vinicius-lier" aria-label="GitHub" data-tooltip="GitHub">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                        <path
-                            d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.01-.02-1.98-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.21.67.8.56A10.99 10.99 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
-                    </svg>
-                </a>
-                <a href="https://www.linkedin.com/in/vinicius-oliveira-0457a4a0" aria-label="LinkedIn"
-                    data-tooltip="LinkedIn">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                        <path
-                            d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.55V9h3.57v11.45Z" />
-                    </svg>
-                </a>
-                <a href="https://www.instagram.com/senseivinicius1/" aria-label="Instagram" data-tooltip="Instagram">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                        <path
-                            d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.05.41 2.23.06 1.27.07 1.64.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.05.36-2.23.41-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.71 3.71 0 0 1-1.38-.9 3.71 3.71 0 0 1-.9-1.38c-.16-.42-.36-1.05-.41-2.23-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.05-.36 2.23-.41 1.27-.06 1.64-.07 4.85-.07ZM12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56-.79.31-1.46.72-2.13 1.38a5.88 5.88 0 0 0-1.38 2.13c-.3.76-.5 1.63-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.66 1.34 1.07 2.13 1.38.76.3 1.63.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38c.66-.67 1.07-1.34 1.38-2.13.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84Zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.41-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0Z" />
-                    </svg>
-                </a>
-            </div>
-            <div class="sidebar__footer">
-                copyright &copy; 2026 Vinicius Oliveira <br> Todos os direitos reservados.
-            </div>
-        </aside>
-
-        <button class="mobile-menu" id="mobileMenu" aria-expanded="false">
-            <span class="mobile-menu__line"></span>
-            <span class="mobile-menu__line"></span>
-            <span class="mobile-menu__line"></span>
-            <span class="sr-only">Menu</span>
-        </button>
-        <div class="overlay" id="overlay" aria-hidden="true"></div>
+        </header>
+        <nav class="world-subnav painel" aria-label="Conteúdo do judô" data-world-content="judo" hidden><a href="#judo-historia">História</a><a href="#judo-senseis">Senseis</a><a href="#judo-trajetoria">Trajetória</a><a href="#judo-galeria">Galeria</a><a href="#judo-projetos">Projetos</a><a href="#contact">Contato</a></nav>
 
         <main class="main-content">
-            <!-- Hero Section -->
-            <section id="home" class="section hero">
-                <img src="./assets/hero-photo.jpg"
-                    alt="Vinícius Oliveira, desenvolvedor e analista de redes, em seu ambiente de trabalho"
-                    class="hero__portrait" width="1672" height="941" fetchpriority="high">
-                <div class="hero__portrait-veil" aria-hidden="true"></div>
-                <div class="hero__heading" data-animate="fade-right">
-                    <p class="section-label">Home</p>
-                    <h1 class="hero__title">
-                        Olá, eu sou Vinícius Oliveira
-                    </h1>
-                </div>
-                <div class="hero__content">
-                    <p class="hero__subtitle">
-                        Desenvolvedor | Automação | Redes
-                    </p>
-                    <p class="hero__description">
-                        Construo software e cuido da infraestrutura que o sustenta. Atuo entre redes, automação e
-                        desenvolvimento, transformando processos manuais de operação em fluxos conectados,
-                        organizados e confiáveis.
-                    </p>
-
-                    <div class="hero__actions">
-                        <a href="#projects" class="btn btn--primary">Ver projetos</a>
-                        <span class="hero__actions-arrow" aria-hidden="true">→</span>
-                        <a href="#contact" class="btn btn--secondary">Fale comigo</a>
+            <h1 class="sr-only">Vinícius Oliveira: tecnologia e judô</h1>
+            <section id="home" class="world-story cine" aria-label="Dois mundos, a mesma dedicação">
+                <div class="world-stage">
+                    <div class="world-scene scene-tech" id="tecnologia">
+                        <img class="world-background" src="./assets/worlds/ambiente-ti-v2.webp" alt="" aria-hidden="true" width="1672" height="941" fetchpriority="high">
+                        <img class="world-character" src="./assets/worlds/personagem-ti.webp" alt="Vinícius em anime, com notebook e moletom de tecnologia" width="1088" height="1448" fetchpriority="high">
+                        <div class="scene-shade" aria-hidden="true"></div>
+                        <div class="world-copy copy-tech painel">
+                            <h2>Desenvolvimento web.<br><em>Automação na prática.</em></h2>
+                            <p>Desenvolvo sites, sistemas web e automações. Conecto APIs, organizo processos e cuido da infraestrutura que mantém tudo funcionando.</p>
+                            <div class="world-actions">
+                                <a href="#projects">Explorar projetos <svg class="arrow-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+                                <a href="#judo" data-switch-world="judo">Ir para o judô <svg class="arrow-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+                            </div>
+                        </div>
                     </div>
+                    <div class="world-scene scene-judo" id="judo">
+                        <img class="world-background" src="./assets/worlds/ambiente-dojo.webp" alt="" aria-hidden="true" width="1672" height="941" decoding="async">
+                        <img class="world-character" src="./assets/worlds/personagem-judo.webp" alt="Vinícius em anime, de judogi e fazendo um gesto de orientação" width="1088" height="1448" decoding="async">
+                        <div class="scene-shade" aria-hidden="true"></div>
+                        <div class="world-copy copy-judo painel">
+                            <h2>Judô como propósito.<br><em>Ensino como legado.</em></h2>
+                            <p>Sensei Vinícius · Judô Clube Solera. Minha história, os senseis que me formaram e os registros do trabalho no tatame.</p>
+                            <div class="world-actions"><a href="#judo-historia">Conhecer minha história <svg class="arrow-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a href="#tecnologia" data-switch-world="tech">Voltar à tecnologia <svg class="arrow-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
+                        </div>
+                    </div>
+                    <div class="story-footer">
+                        <span class="story-chapter"><span class="chapter-tech">Tecnologia</span><span class="chapter-judo">Judô</span></span>
+                        <a href="#judo" data-switch-world="judo" class="scroll-invitation">Atravessar para o judô <svg class="arrow-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+                        <span class="image-disclosure">Anime inspirado nas suas artes</span>
+                    </div>
+                    <div class="story-progress" aria-hidden="true"><span></span></div>
                 </div>
             </section>
 
-            <section id="about" class="section">
-                <p class="section-label">Sobre</p>
-                <h2 class="section-title">Sobre mim</h2>
+            <section id="judo-historia" class="sensei-section art-section art-section--direita" data-world-content="judo" hidden>
+      <img class="arte arte--direita" src="./assets/worlds/ambiente-dojo.webp" alt="" aria-hidden="true" loading="lazy">
+      <div class="sensei-panel painel"><span class="section-number" aria-hidden="true">01</span><h2>Uma história que passa pelo judô.</h2><div class="sensei-story" aria-roledescription="carrossel" aria-label="História pessoal"><div class="sensei-story-text"><article class="sensei-story-slide" >
+            <h3 class="slide-title">Onde tudo era instável</h3>
+            <p>Nem todo caminho começa em terreno firme.<br />
+              Cresci entre casas, parentes e ausências.<br />
+              Aprendi cedo a me adaptar,<br />
+              mas ainda não sabia onde pertencer.</p>
+          </article><article class="sensei-story-slide" hidden>
+            <h3 class="slide-title">O primeiro contato com o caminho</h3>
+            <p>Aos 8 anos, o judô entrou na minha vida.<br />
+              Não como um sonho,<br />
+              mas como uma possibilidade.</p>
+          </article><article class="sensei-story-slide" hidden>
+            <h3 class="slide-title">Ordem em meio ao caos</h3>
+            <p>Sempre fui pacífico.<br />
+              O judô me ensinou ordem, limite<br />
+              e respeito quando tudo parecia disperso.</p>
+          </article><article class="sensei-story-slide" hidden>
+            <h3 class="slide-title">Quando o caminho foi interrompido</h3>
+            <p>Aos 12 anos, fui afastado do judô.<br />
+              Um erro.<br />
+              Justamente o que me mantinha alinhado<br />
+              foi retirado de mim.</p>
+          </article><article class="sensei-story-slide" hidden>
+            <h3 class="slide-title">O retorno não foi por acaso</h3>
+            <p>Aos 15 anos, retornei.<br />
+              Outra cidade. Outro sensei.<br />
+              Competição, pertencimento<br />
+              e acolhimento.</p>
+          </article><article class="sensei-story-slide" hidden>
+            <h3 class="slide-title">A primeira grande prova</h3>
+            <p>A faixa marrom veio acompanhada<br />
+              da primeira grande lesão.<br />
+              Medo, dor<br />
+              e a decisão de continuar.</p>
+          </article><article class="sensei-story-slide" hidden>
+            <h3 class="slide-title">Novos ciclos exigem novas posturas</h3>
+            <p>A vida trouxe mudanças.<br />
+              Outro lugar. Outro dojô.<br />
+              Um novo pilar no caminho.</p>
+          </article><article class="sensei-story-slide" hidden>
+            <h3 class="slide-title">Quando ensinar se tornou inevitável</h3>
+            <p>Ensinar passou a ser a forma<br />
+              de devolver tudo o que recebi.<br />
+              O judô deixou de ser prática.<br />
+              Tornou-se propósito.</p>
+          </article><article class="sensei-story-slide" hidden>
+            <h3 class="slide-title">O que permanece</h3>
+            <p>Hoje, sigo formando pessoas.<br />
+              Não é trabalho.<br />
+              É legado.</p>
+          </article></div><div class="sensei-carousel-controls"><button type="button" data-story-step="-1" aria-label="Capítulo anterior"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button><span data-story-counter aria-live="polite">1 / 9</span><button type="button" data-story-step="1" aria-label="Próximo capítulo"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></div></div></div>
+    </section>
+<section id="judo-senseis" class="sensei-section art-section art-section--esquerda" data-world-content="judo" hidden>
+      <img class="arte arte--esquerda" src="./assets/worlds/ambiente-dojo.webp" alt="" aria-hidden="true" loading="lazy">
+      <div class="sensei-panel painel"><span class="section-number" aria-hidden="true">01</span><h2>Quem me ensinou a ensinar.</h2>
+      <div class="senseis__intro">
+
+        <p class="senseis__subtitle">Referências que formaram meu caráter e inspiram meu caminho no judô.</p>
+        <p class="senseis__concept">
+          Essa seção não é ranking nem exibição: é reconhecimento público de legado. Quem forma um sensei também faz
+          parte do que ele se torna.
+        </p>
+      </div>
+
+      <div class="senseis-group">
+        <h3 class="group-title">Senseis da minha caminhada</h3>
+        <p class="group-intro">
+          Estes senseis não apenas ensinaram judô. Eles estiveram presentes quando a vida exigiu mais do que técnica.
+          Minha gratidão é eterna.
+        </p>
+
+        <div class="senseis-grid">
+          <article class="sensei-card">
+            <img class="sensei-photo arte" src="./assets/sensei/senseis/Claudio.webp" loading="lazy" alt="Sensei Cláudio Leonardo">
+            <h4>Sensei Cláudio Leonardo</h4>
+            <p>
+              Gratidão por ter acreditado, acolhido e ensinado quando eu mais precisei.
+              Parte do que sou no tatame vem do que aprendi com você.
+            </p>
+            <a href="https://www.instagram.com/sensei.claudioleonardo/" target="_blank" rel="noreferrer"
+             >@sensei.claudioleonardo</a>
+          </article>
+
+          <article class="sensei-card">
+            <img class="sensei-photo arte" src="./assets/sensei/senseis/Solera.webp" loading="lazy" alt="Sensei José Roberto Solera">
+            <h4>Sensei José Roberto Solera</h4>
+            <p>
+              Obrigado por confiar, orientar e abrir caminhos.
+              Ensinar se tornou propósito a partir do que aprendi ao seu lado.
+            </p>
+            <a href="https://www.instagram.com/judoclubesolera/" target="_blank" rel="noreferrer"
+             >@judoclubesolera</a>
+          </article>
+        </div>
+      </div>
+
+      <div class="senseis-group">
+        <h3 class="group-title">Senseis que me inspiram</h3>
+        <p class="group-intro">
+          Além daqueles que caminharam comigo, há senseis que me inspiram pela postura, pelo ensino e pela forma como
+          representam o judô.
+        </p>
+
+        <div class="senseis-grid">
+          <article class="sensei-card">
+            <img class="sensei-photo arte" src="./assets/sensei/senseis/Derides.webp" loading="lazy" alt="Sensei Derides de Castro">
+            <h4>Sensei Derides de Castro</h4>
+            <p>
+              Inspiração pela postura, pelo respeito ao judô
+              e pelo compromisso com a formação humana.
+            </p>
+            <a href="https://www.instagram.com/deridesdecastro/" target="_blank" rel="noreferrer"
+             >@deridesdecastro</a>
+          </article>
+          <article class="sensei-card">
+            <img class="sensei-photo arte" src="./assets/sensei/senseis/heliooliveira.webp" loading="lazy" alt="Sensei Hélio de Oliveira">
+            <h4>Sensei Hélio de Oliveira</h4>
+            <p>
+              Inspiração pela postura, pelo respeito ao judô
+              e pelo compromisso com a formação humana.
+            </p>
+            <a href="https://www.instagram.com/heliodeooliveiraazho/" target="_blank" rel="noreferrer"
+             >@heliodeooliveiraazho</a>
+          </article>
+          <article class="sensei-card">
+            <img class="sensei-photo arte" src="./assets/sensei/senseis/alexandre.webp" loading="lazy" alt="Sensei Alexandre Xavier">
+            <h4>Sensei Alexandre Xavier</h4>
+            <p>
+              Inspiração pela postura, pelo respeito ao judô
+              e pelo compromisso com a formação humana.
+            </p>
+            <a href="https://www.instagram.com/alexandrexrcunha/" target="_blank" rel="noreferrer"
+             >@alexandrexrcunha</a>
+          </article>
+        </div>
+      </div>
+      <div class="senseis-legacy">
+        <h3 class="legacy-title">Legado</h3>
+        <p class="text">
+          Sigo o legado daqueles que me ensinaram pelo exemplo.
+          Tudo o que faço no tatame é uma tentativa de honrar o que recebi: a forma de ensinar, de ouvir e de cuidar dos
+          alunos.
+          Se algo permanece no meu judô, é porque primeiro foi vivido por eles.
+        </p>
+      </div>
+    </div>
+    </section>
+<section id="judo-trajetoria" class="sensei-section art-section art-section--fundo" data-world-content="judo" hidden>
+      <img class="arte arte--fundo" src="./assets/worlds/ambiente-dojo.webp" alt="" aria-hidden="true" loading="lazy">
+      <div class="sensei-panel painel"><span class="section-number" aria-hidden="true">01</span><h2>Minha trajetória no judô.</h2><p>
+          Minha trajetória como professor começa em 2017, dando forma a uma história construída com responsabilidade,
+          compromisso e o desejo de ensinar como aprendi.
+        </p><div class="sensei-timeline"><details class="sensei-year" open><summary>2017 — O início com responsabilidade</summary><div class="sensei-year-body">
+              <div class="journey-media">
+                <img class="arte sensei-journey-photo" src="./assets/sensei/journey/2017.webp" loading="lazy" alt="2017 — academia MrFit">
+              </div>
+              <p>
+                Em 2017 iniciei meu trabalho como professor de judô na academia MrFit. Naquele momento, ainda faixa
+                marrom, o medo e a insegurança estavam presentes. Mesmo assim, segui com o respaldo e a confiança do meu
+                professor para conduzir aqueles alunos. Desde o início, meu compromisso foi oferecer um ensino sério,
+                responsável e respeitoso, priorizando a formação humana antes de qualquer resultado.
+              </p>
+            </div></details><details class="sensei-year" ><summary>2018 — Consolidação e faixa preta</summary><div class="sensei-year-body">
+              <div class="journey-media">
+                <img class="arte sensei-journey-photo" src="./assets/sensei/journey/2018.webp" loading="lazy" alt="2018 — faixa preta">
+              </div>
+              <p>
+                Em 2018 veio a graduação à faixa preta, marcando uma nova etapa de responsabilidade no ensino.
+                Nesse mesmo período, passamos para um novo dojô. Um espaço menor, simples, mas cheio de esperança, onde
+                o trabalho continuou a se estruturar com base na disciplina, na constância e no cuidado com os alunos.
+              </p>
+            </div></details><details class="sensei-year" ><summary>2019 — Crescimento e interrupção inesperada</summary><div class="sensei-year-body">
+              <div class="journey-media">
+                <img class="arte sensei-journey-photo" src="./assets/sensei/journey/2019.webp" loading="lazy" alt="2019 — dojô maior">
+              </div>
+              <p>
+                Em 2019 houve a expansão para um dojô maior, reflexo da evolução do trabalho e da confiança construída
+                com os alunos e famílias. Pouco tempo depois, fomos surpreendidos pela pandemia, que interrompeu
+                treinos, rotinas e planos, exigindo paciência, adaptação e resiliência.
+              </p>
+            </div></details><details class="sensei-year" ><summary>2021 — Retomada e reconstrução</summary><div class="sensei-year-body">
+              <div class="journey-media">
+                <img class="arte sensei-journey-photo" src="./assets/sensei/journey/2021.webp" loading="lazy" alt="2021 — retomada no telhado">
+              </div>
+              <p>
+                Após o período mais crítico da pandemia, em 2021 retomamos as atividades de forma gradual, inicialmente
+                no teto da minha própria casa. Com o tempo, conseguimos avançar para um espaço ainda maior, reafirmando
+                que o judô não depende apenas de estrutura, mas de compromisso e continuidade.
+              </p>
+            </div></details><details class="sensei-year" ><summary>2022 — Amadurecimento no caminho</summary><div class="sensei-year-body">
+              <div class="journey-media">
+                <img class="arte sensei-journey-photo" src="./assets/sensei/journey/2022.webp" loading="lazy" alt="2022 — 2º Dan">
+              </div>
+              <p>
+                Em 2022 recebi a graduação ao 2º Dan, um marco que representou amadurecimento técnico e pedagógico. Esse
+                momento reforçou minha responsabilidade como professor e formador, consolidando valores que busco
+                transmitir diariamente no tatame.
+              </p>
+            </div></details><details class="sensei-year" ><summary>2023 — Expansão do propósito e união da equipe</summary><div class="sensei-year-body">
+              <div class="journey-media">
+                <img class="arte sensei-journey-photo" src="./assets/sensei/journey/2023.webp" loading="lazy" alt="2023 — Paraty e Copa Solera">
+              </div>
+              <p>
+                Em 2023 iniciamos, em paralelo, um trabalho em Paraty, apoiando um grupo de judocas que estavam sem
+                sensei. Com o tempo, esse grupo passou a integrar o Judô Clube Solera (JCS), fortalecendo o senso de
+                equipe, pertencimento e continuidade do ensino. Nesse mesmo período, atuamos no Clube do Frade e
+                realizamos a 1ª Copa Solera de Judô, um evento marcante e de grande sucesso. Apesar dos resultados
+                positivos, enfrentamos dificuldades estruturais que nos levaram a buscar novos caminhos para manter o
+                trabalho com dignidade.
+              </p>
+            </div></details><details class="sensei-year" ><summary>2024 — Um marco no legado</summary><div class="sensei-year-body">
+              <div class="journey-media">
+                <img class="arte sensei-journey-photo" src="./assets/sensei/journey/2024.webp" loading="lazy" alt="2024 — faixa preta">
+              </div>
+              <p>
+                Em 2024 alcançamos um momento histórico: a formação do primeiro faixa preta formado integralmente sob
+                minha orientação, João Vitor Euzébio Santos. Esse marco simboliza um ciclo completo de ensino,
+                acompanhamento e responsabilidade, refletindo o compromisso com a formação sólida e contínua dos alunos.
+              </p>
+            </div></details><details class="sensei-year" ><summary>2025 — Recomeço e continuidade</summary><div class="sensei-year-body">
+              <div class="journey-media">
+                <img class="arte sensei-journey-photo" src="./assets/sensei/journey/2025.webp" loading="lazy" alt="2025 — Volta Redonda">
+              </div>
+              <p>
+                Em 2025, com a perda do espaço no Frade, me mudei para Volta Redonda, onde atualmente sigo lecionando
+                judô, por enquanto, na Academia 63. Um novo ciclo se inicia, mantendo os mesmos valores, a mesma postura
+                e o mesmo propósito no ensino do judô.
+              </p>
+            </div></details></div><p class="sensei-conclusion">
+          Minha trajetória no judô é construída pela constância, pelo respeito ao caminho e pela responsabilidade de
+          ensinar como aprendi.
+        </p></div>
+    </section>
+<section id="judo-galeria" class="sensei-section art-section art-section--esquerda" data-world-content="judo" hidden>
+      <img class="arte arte--esquerda" src="./assets/worlds/ambiente-dojo.webp" alt="" aria-hidden="true" loading="lazy">
+      <div class="sensei-panel painel"><span class="section-number" aria-hidden="true">01</span><h2>Aulas, encontros e memórias.</h2><p>O acervo do portfólio de sensei, agora reunido aqui. Abra uma foto para ver em tamanho maior.</p><div class="sensei-gallery-grid" id="senseiGallery" aria-live="polite"><p>As fotos serão carregadas ao entrar no mundo Judô.</p></div><div class="sensei-carousel-controls"><button type="button" data-gallery-step="-1" aria-label="Página anterior da galeria"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button><span id="senseiGalleryCount" aria-live="polite"></span><button type="button" data-gallery-step="1" aria-label="Próxima página da galeria"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></div><button type="button" id="senseiGalleryRetry" hidden>Tentar carregar novamente</button></div>
+    </section>
+
+            <section id="judo-projetos" class="section art-section art-section--direita" data-world-content="judo" hidden>
+                <img class="arte arte--direita" src="./assets/worlds/ambiente-dojo.webp" alt="" loading="lazy" aria-hidden="true">
+                <div class="section__panel painel"><span class="section-number" aria-hidden="true">02</span><h2 class="section-title">Quando o judô<br>encontra a tecnologia.</h2>
+                <p class="section__intro">Projetos do meu portfólio ligados ao esporte, à organização de competições e à presença digital do judô.</p>
+                <div class="judo-project-links"><a class="text-link" href="https://shiaisitem.com.br/" target="_blank" rel="noopener noreferrer">Shiai Sistem · gestão de competições <svg class="arrow-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a class="text-link" href="https://judokeikofukuda.com.br/" target="_blank" rel="noopener noreferrer">Escola de Judô Keiko Fukuda <svg class="arrow-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a class="text-link" href="https://referee-fjerj-045f4381b000.herokuapp.com/" target="_blank" rel="noopener noreferrer">SISARB · plataforma de arbitragem <svg class="arrow-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div></div>
+            </section>
+
+            <section id="about" data-world-content="tech" class="section art-section art-section--direita"><img class="arte arte--direita" src="./assets/worlds/ambiente-ti-v2.webp" alt="" loading="lazy" aria-hidden="true"><div class="section__panel painel"><span class="section-number" aria-hidden="true">02</span>
+                <h2 class="section-title">Tecnologia que encontra<br>o mundo real.</h2>
                 <div class="section__content">
                     <p>
                         Atuo entre desenvolvimento web, redes de computadores e infraestrutura de telecomunicações —
@@ -123,10 +340,19 @@
                     <li>Automação de processos operacionais</li>
                     <li>Integração entre sistemas, dados e infraestrutura</li>
                 </ul>
-            </section>
+            </div></section>
 
-            <section id="redes" class="section">
-                <p class="section-label">Redes</p>
+            <section id="desenvolvimento" data-world-content="tech" class="section art-section art-section--direita"><img class="arte arte--direita" src="./assets/worlds/ambiente-ti-v2.webp" alt="" loading="lazy" aria-hidden="true"><div class="section__panel painel"><span class="section-number" aria-hidden="true">02</span>
+                <h2 class="section-title">Do site ao processo automatizado.</h2>
+                <p class="section__intro">Desenvolvo interfaces e sistemas para quem precisa apresentar um negócio, organizar uma operação ou tirar uma tarefa repetitiva da rotina.</p>
+                <div class="development-areas">
+                    <div><h3>Sites e sistemas web</h3><p>Portfólios, sites institucionais e aplicações com cadastros, painéis e fluxos de trabalho. Penso na navegação, no uso pelo celular e na ligação da interface com os dados.</p><p>Nos meus projetos, isso aparece nos sistemas de judô e arbitragem e no CICLO, que reúne cobranças recorrentes e acompanhamento de pagamentos.</p></div>
+                    <div><h3>Automações e integrações</h3><p>Uso Python, APIs REST e webhooks para conectar ferramentas e executar processos: correlacionar eventos, corrigir cadastros e enviar notificações operacionais.</p><p>Travapon, BackOffice e monitoramento FTTH mostram essa atuação, da identificação do problema à integração com a rotina da equipe.</p></div>
+                </div>
+                <a href="#projects" class="btn btn--secondary">Ver esses projetos</a>
+            </div></section>
+
+            <section id="redes" data-world-content="tech" class="section art-section art-section--fundo"><img class="arte arte--fundo" src="./assets/worlds/ambiente-ti-v2.webp" alt="" loading="lazy" aria-hidden="true"><div class="section__panel painel"><span class="section-number" aria-hidden="true">03</span>
                 <h2 class="section-title">Redes & Infraestrutura</h2>
                 <p class="section__intro">
                     Atuo na operação de um NOC/CGR de provedor de internet: monitoramento, troubleshooting e
@@ -168,10 +394,9 @@
                         </ul>
                     </div>
                 </div>
-            </section>
+            </div></section>
 
-            <section id="projects" class="section">
-                <p class="section-label">Projetos</p>
+            <section id="projects" data-world-content="tech" class="section art-section art-section--esquerda"><img class="arte arte--esquerda" src="./assets/worlds/tecnologia.webp" alt="" loading="lazy" aria-hidden="true"><div class="section__panel painel"><span class="section-number" aria-hidden="true">04</span>
                 <h2 class="section-title">Projetos</h2>
                 <p class="section__intro">
                     Projetos organizados por foco: automação de operação e redes, e produtos web completos. Cada um
@@ -242,6 +467,15 @@
 
                 <h3 class="project-category__title">Produtos</h3>
                 <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-thumb project-thumb--ciclo">
+                            <img src="./assets/projects/ciclo.jpg" alt="Site do Ciclo com demonstração de cobranças recorrentes pelo WhatsApp" loading="lazy">
+                        </div>
+                        <h3>CICLO · Cobranças pelo WhatsApp</h3>
+                        <p class="project-desc">Assistente para cadastrar clientes, gerar cobranças Pix recorrentes e acompanhar pagamentos pelo WhatsApp. Integra a conta Woovi do negócio para receber os pagamentos e confirmar a baixa.</p>
+                        <ul class="tag-list"><li>WhatsApp</li><li>Pix</li><li>Woovi</li><li>Cobranças recorrentes</li></ul>
+                        <a href="http://ciclo.ia.br/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">Conhecer o CICLO</a>
+                    </article>
                     <article class="project-card">
                         <div class="project-thumb project-thumb--shiai">
                             <img src="./assets/projects/shiai-system.jpg" alt="Shiai Sistem dashboard">
@@ -331,9 +565,8 @@
                         </div>
                         <h3>Sensei Vinicius</h3>
                         <p class="project-tool">JavaScript</p>
-                        <a href="https://senseivincius.netlify.app/" class="btn btn--secondary" target="_blank"
-                            rel="noreferrer">
-                            Ver projeto
+                        <a href="#judo" class="btn btn--secondary" data-switch-world="judo">
+                            Explorar o mundo Judô
                         </a>
                     </article>
                     <article class="project-card">
@@ -349,37 +582,43 @@
                         </a>
                     </article>
                 </div>
-            </section>
+            </div></section>
 
-            <section id="contact" class="section">
-                <p class="section-label">Contato</p>
+            <section id="contact" class="section art-section art-section--fundo"><img class="arte arte--fundo" src="./assets/worlds/ambiente-dojo.webp" alt="" loading="lazy" aria-hidden="true"><div class="section__panel painel"><span class="section-number" aria-hidden="true">05</span>
                 <h2 class="section-title">Vamos conversar</h2>
                 <div class="section__content">
                     <p>
-                        Se você busca alguém capaz de conectar software, automação e infraestrutura para resolver
-                        problemas operacionais, vamos conversar.
+                        Para conversar sobre tecnologia, projetos ou minha atuação no judô, entre em contato.
                     </p>
                 </div>
                 <div class="contact-list">
                     <div class="hero__meta-item">
-                        <span class="hero__meta-icon">☎</span>
+
                         <span>(24) 99958-2526</span>
                     </div>
                 </div>
-                <div class="hero__actions contact-cta">
+
+                <div class="sensei-contact-details" data-world-content="judo" hidden><img class="sensei-club-mark" src="./assets/sensei/brand/clube-solera.webp" alt="Judô Clube Solera" width="150" height="150" loading="lazy"><p>Agende uma visita ao dojô, converse sobre aulas particulares ou convites para demonstrações.
+          Rua Argentina, 63 - Vila Americana - Volta Redonda/RJ.</p><a class="text-link" href="mailto:vinnylive1@gmail.com">vinnylive1@gmail.com</a><a class="text-link" href="https://www.instagram.com/senseivinicius1/" target="_blank" rel="noopener noreferrer">Instagram do Sensei Vinícius</a></div><form class="contact-form" id="contactForm">
+                    <label for="contactName">Seu nome<input id="contactName" name="nome" autocomplete="name" required maxlength="100"></label>
+                    <label for="contactTopic">Sobre o que quer conversar?<select id="contactTopic" name="assunto"><option>Tecnologia e projetos</option><option>Judô</option><option>Outro assunto</option></select></label>
+                    <label for="contactMessage">Mensagem<textarea id="contactMessage" name="mensagem" rows="4" required maxlength="2000"></textarea></label>
+                    <button class="btn btn--primary" type="submit">Continuar no WhatsApp</button>
+                    <p>Seu texto será aberto no WhatsApp. Revise e envie por lá para concluir o contato. Este site não armazena os dados.</p>
+                </form>
+<div class="hero__actions contact-cta">
                     <a href="https://wa.me/5524999582526" class="btn btn--primary" target="_blank" rel="noreferrer">
                         Falar no WhatsApp
                     </a>
-                    <span class="hero__actions-arrow" aria-hidden="true">→</span>
+
                     <a href="https://www.linkedin.com/in/vinicius-oliveira-0457a4a0" class="btn btn--secondary"
                         target="_blank" rel="noreferrer">
                         Ver LinkedIn
                     </a>
                 </div>
-            </section>
+            </div></section>
 
-            <section id="resume" class="section">
-                <p class="section-label">Currículo</p>
+            <section id="resume" data-world-content="tech" class="section art-section art-section--direita"><img class="arte arte--direita" src="./assets/worlds/ambiente-ti-v2.webp" alt="" loading="lazy" aria-hidden="true"><div class="section__panel painel"><span class="section-number" aria-hidden="true">06</span>
                 <h2 class="section-title">Perfil profissional</h2>
                 <div class="section__content">
                     <p>
@@ -409,10 +648,15 @@
                         Ver currículo completo
                     </a>
                 </div>
-            </section>
+            </div></section>
         </main>
+        <footer class="site-footer painel"><a class="marca-texto" href="#home"><span class="brand-tech tech-signature"><img src="./assets/brand/vo-fibra.svg" alt="" width="320" height="164"><span class="tech-wordmark">VINÍCIUS<span>OLIVEIRA</span></span></span><img class="brand-sensei" src="./assets/sensei/brand/sensei-sakura.webp" alt="Sensei Vinícius" width="1000" height="366" loading="lazy"></a><span data-world-content="judo" hidden>Judô Clube Solera · Sensei Vinícius</span><p>Tecnologia e judô.</p><p>© <span data-year>2026</span> Vinícius Oliveira</p><nav aria-label="Redes sociais"><a href="https://github.com/vinicius-lier">GitHub</a><a href="https://www.linkedin.com/in/vinicius-oliveira-0457a4a0">LinkedIn</a><a href="https://www.instagram.com/senseivinicius1/">Instagram</a></nav></footer>
     </div>
+<div class="door-pass" aria-hidden="true"><span class="door-handle"></span><span class="transition-message painel">A mesma dedicação.</span></div>
+<dialog class="sensei-lightbox" id="senseiLightbox" aria-label="Foto do acervo de judô"><button type="button" class="sensei-lightbox-close" aria-label="Fechar foto"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button><button type="button" class="sensei-lightbox-prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button><figure><img alt="" id="senseiLightboxImage"><figcaption id="senseiLightboxCaption"></figcaption></figure><button type="button" class="sensei-lightbox-next" aria-label="Próxima foto"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></dialog>
     <script src="./script.js"></script>
+    <script src="./worlds.js?v=logo-fibra-3"></script>
+    <script src="./sensei.js"></script>
 </body>
 
 </html>
